@@ -5,7 +5,7 @@ My name is Yang Li, I'm currently a master student at Northeastern University an
 The purpose of this repository is to help me develop a full stack website in my web development course.
 
 # Links
-Heroku:
-Project:
-Assignment:
+Heroku:  https://webdev-yangli-cs5610.herokuapp.com/  
+Project:  
+Assignment:  
 
