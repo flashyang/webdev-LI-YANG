@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Widget List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/style.css" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <a class="navbar-brand" href="widget-list.html">
+      <span class="fa fa-chevron-left rotate"></span>
+    </a>
+    <a class="navbar-text cl-text-bold" href="#">
+      Widgets Edit
+    </a>
+  </form>
+  <ul class="navbar-nav ml-auto">
+    <a href="widget-list.html" class="navbar-brand pull-right">
+      <span class="fa fa-check"></span>
+    </a>
+  </ul>
+</nav>
+
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="image-name">Name</label>
+      <input type="text" class="form-control" id="image-name" placeholder="Image Name">
+    </div>
+    <div class="form-group">
+      <label for="image-text">Text</label>
+      <input type="text" class="form-control" id="image-text" placeholder="Image Text">
+    </div>
+    <div class="form-group">
+      <label for="image-URL">URL</label>
+      <input type="text" class="form-control" id="image-URL" placeholder="Image URL">
+    </div>
+    <div class="form-group">
+      <label for="image-width">Width</label>
+      <input type="text" class="form-control" id="image-width" placeholder="100%">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputFile">Upload</label>
+      <input type="file" class="form-control" id="exampleInputFile">
+    </div>
+  </form>
+  <a class="btn btn-primary btn-block" href="#">Upload Image</a>
+  <a class="btn btn-danger  btn-block" href="widget-list.html">Delete</a>
+</div>
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <ul class="navbar-nav ml-auto">
+    <a class="navbar-brand pull-right" href="profile.html">
+      <span class="fa fa-user"></span>
+    </a>
+  </ul>
+</nav>
+
+</body>
+</html>
