@@ -1,0 +1,68 @@
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <a class="navbar-brand pull-left" routerLink="/user/{{userId}}/website/{{websiteId}}/page">
+      <span class="fa fa-chevron-left rotate"></span>
+    </a>
+    <a class="navbar-text cl-text-bold" [routerLink]="">
+      Widgets
+    </a>
+  </form>
+  <ul class="navbar-nav ml-auto">
+    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/new">
+      <span class="fa fa-plus"></span>
+    </a>
+  </ul>
+</nav>
+
+<div class="container cl-container-padding">
+  <div *ngFor = "let widget of widgets">
+    <div [ngSwitch]="widget.widgetType">
+      <div *ngSwitchCase="'HEADING'">
+        <div class="pull-right">
+          <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}">
+            <span class="fa fa-cog"></span>
+          </a>
+        </div>
+        <h1>{{widget.text}}</h1>
+      </div>
+
+      <div *ngSwitchCase="'IMAGE'">
+        <div>
+          <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}" class="pull-right">
+            <span class="fa fa-cog"></span>
+          </a>
+          <img class="img-responsive img-rounded cl-widget-images"
+               src="{{widget.url}}">
+        </div>
+      </div>
+
+      <div *ngSwitchCase="'YOUTUBE'">
+        <div class="embed-responsive embed-responsive-16by9">
+          <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}" class="pull-right sticky-top">
+            <span class="fa fa-cog youtube" ></span>
+          </a>
+          <h1>{{widget.url}}</h1>
+          <iframe width="640" height="360" [src]="url(widget.url)" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <form class="form-inline">
+    <a [routerLink]="" class="navbar-brand">
+      <span class="fa fa-play"></span>
+    </a>
+    <a [routerLink]="" class="navbar-brand">
+      <span class="fa fa-eye"></span>
+    </a>
+  </form>
+  <ul class="navbar-nav ml-auto">
+    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}">
+      <span class="fa fa-user"></span>
+    </a>
+  </ul>
+</nav>

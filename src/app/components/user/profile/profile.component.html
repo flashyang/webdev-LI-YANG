@@ -1,0 +1,49 @@
+<nav class="navbar navbar-dark cl-blue-navbar">
+  <a class="navbar-brand" [routerLink]="">
+    Profile
+  </a>
+  <a class="navbar-brand pull-right" (click)="updateUser()" routerLink="/user/{{userId}}">
+    <span class="fa fa-check"></span>
+  </a>
+</nav>
+<div class="container main">
+  <form #inputForm="ngForm">
+    <div class="form-group">
+      <label for="username">
+        <h5>Username</h5>
+      </label>
+      <input type="text" id='username' name='username' class="form-control" [(ngModel)]="user.username" required>
+    </div>
+    <div class="form-group">
+      <label for="email">
+        <h5>Email address</h5>
+      </label>
+      <input type="email" id="email" name='email' class="form-control" [(ngModel)]="user.email" required>
+    </div>
+    <div class="form-group">
+      <label for="first-name">
+        <h5>First Name</h5>
+      </label>
+      <input type="text" id="first-name" name='firstName' class="form-control" [(ngModel)]="user.firstName" required>
+    </div>
+    <div class="form-group">
+      <label for="last-name">
+        <h5>Last Name</h5>
+      </label>
+      <input type="text" id="last-name" name='lastName' class="form-control" [(ngModel)]="user.lastName" required>
+    </div>
+
+    <div class="form-group">
+      <a class="btn btn-block btn-primary"
+         routerLink="/user/{{user._id}}/website">
+        Websites
+      </a>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-danger btn-block" routerLink="/login">Logout</button>
+    </div>
+
+  </form>
+</div>
+<nav class="navbar navbar-dark fixed-bottom cl-blue-navbar"></nav>

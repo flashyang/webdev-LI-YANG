@@ -1,0 +1,37 @@
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <a class="navbar-brand" routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget">
+      <span class="fa fa-chevron-left rotate"></span>
+    </a>
+    <a class="navbar-text cl-text-bold" [routerLink]="">
+      Widgets Edit
+    </a>
+  </form>
+  <ul class="navbar-nav ml-auto">
+    <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget" (click)="update()" class="navbar-brand pull-right">
+      <span class="fa fa-check"></span>
+    </a>
+  </ul>
+</nav>
+
+<div class="container">
+  <form #inputForm="ngForm">
+    <div class="form-group">
+      <label for="heading-text">Text</label>
+      <input type="text" class="form-control" id="heading-text" name="Text" placeholder="Text" [(ngModel)]="widget.text" required>
+    </div>
+    <div class="form-group">
+      <label for="heading-size">Size</label>
+      <input type="text" class="form-control" id="heading-size" name="Size" placeholder="3" [(ngModel)]="widget.size" required>
+    </div>
+  </form>
+  <a class="btn btn-danger  btn-block" routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget" (click)="delete()">Delete</a>
+</div>
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <ul class="navbar-nav ml-auto">
+    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}">
+      <span class="fa fa-user"></span>
+    </a>
+  </ul>
+</nav>

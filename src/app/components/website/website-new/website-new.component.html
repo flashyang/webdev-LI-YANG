@@ -1,0 +1,56 @@
+<nav class="navbar navbar-dark cl-blue-navbar">
+  <div class="row container-fluid">
+    <div class="col-sm-4 d-none d-sm-block">
+      <a class="navbar-brand float-left" routerLink="/user/{{userId}}/website">
+        <span class="fa fa-chevron-left rotate"></span>
+      </a>
+      <a class="navbar-brand" [routerLink]="">
+        Websites
+      </a>
+      <a routerLink="/user/{{userId}}/website/new" class="navbar-brand pull-right">
+        <span class="fa fa-plus"></span>
+      </a>
+    </div>
+    <div class="col-sm-8 text-left">
+      <a class="navbar-brand " href="#">
+        New Websites
+      </a>
+      <a class="navbar-brand float-right" routerLink="/user/{{userId}}/website" (click)="create()">
+        <span class="fa fa-check"></span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 d-none d-sm-block">
+      <ul class="list-group cl-list-group-borderless">
+        <li class="list-group-item cl-list-item-borderless"  *ngFor = "let website of websites">
+          <a routerLink="/user/{{userId}}/website/{{website._id}}"><span class="fa fa-cog pull-right"></span></a>
+          <a routerLink="/user/{{userId}}/website/{{website._id}}/page" class="list-name">{{website.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-8">
+      <form #inputForm="ngForm">
+        <div class="form-group">
+          <label for="website-name"><h5>Name</h5></label>
+          <input type="text" id="website-name" name="name" placeholder="Name" class="form-control" ngModel required #name="ngModel">
+        </div>
+        <div class="form-group">
+          <label for="website-description"><h5>Description</h5></label>
+          <input type="text" id="website-description" name="description" placeholder="Description" class="form-control" ngModel required #description="ngModel">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-dark fixed-bottom cl-blue-navbar">
+  <ul class="navbar-nav ml-auto">
+    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}">
+      <span class="fa fa-user"></span>
+    </a>
+  </ul>
+</nav>

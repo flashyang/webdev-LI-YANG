@@ -1,0 +1,53 @@
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <a class="navbar-brand pull-left" routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget">
+      <span class="fa fa-chevron-left rotate"></span>
+    </a>
+    <a class="navbar-text cl-text-bold" [routerLink]="">
+      Choose Widget
+    </a>
+  </form>
+</nav>
+
+<div class="container-fluid">
+  <ul class="list-group cl-list-group-borderless">
+    <li class="list-group-item cl-list-item-borderless">
+      <a [routerLink]="" (click)="create('HEADING')" class="list-name">Header</a>
+    </li>
+    <li class="list-group-item cl-list-item-borderless">
+      <a href="#" class="list-name">Label</a>
+    </li>
+    <li class="list-group-item cl-list-item-borderless">
+      <a href="#" class="list-name">HTML</a>
+    </li>
+    <li class="list-group-item cl-list-item-borderless">
+      <a href="#" class="list-name">Text Input</a>
+    </li>
+    <li class="list-group-item cl-list-item-borderless">
+      <a href="#" class="list-name">Link</a>
+    </li>
+    <li class="list-group-item cl-list-item-borderless">
+      <a href="#" class="list-name">Button</a>
+    </li>
+    <li class="list-group-item cl-list-item-borderless">
+      <a [routerLink]="" (click)="create('IMAGE')" class="list-name">Image</a>
+    </li>
+    <li class="list-group-item cl-list-item-borderless">
+      <a [routerLink]="" (click)="create('YOUTUBE')" class="list-name">YouTube</a>
+    </li>
+    <li class="list-group-item cl-list-item-borderless">
+      <a href="#" class="list-name">Data Table</a>
+    </li>
+    <li class="list-group-item cl-list-item-borderless">
+      <a href="#" class="list-name">Repeater</a>
+    </li>
+  </ul>
+</div>
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <ul class="navbar-nav ml-auto">
+    <a class="navbar-brand pull-right" href="/user/{{userId}}">
+      <span class="fa fa-user"></span>
+    </a>
+  </ul>
+</nav>

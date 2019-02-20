@@ -1,0 +1,41 @@
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <a class="navbar-brand" routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget">
+      <span class="fa fa-chevron-left rotate"></span>
+    </a>
+    <a class="navbar-text cl-text-bold" [routerLink]="">
+      Widgets Edit
+    </a>
+  </form>
+  <ul class="navbar-nav ml-auto">
+    <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget" (click)="update()" class="navbar-brand pull-right">
+      <span class="fa fa-check"></span>
+    </a>
+  </ul>
+</nav>
+
+<div class="container">
+  <form #inputForm="ngForm">
+    <div class="form-group">
+      <label for="youtube-text">Text</label>
+      <input type="text" class="form-control" id="youtube-text" placeholder="Youtube Text" name="Text" [(ngModel)]="widget.text" required>
+    </div>
+    <div class="form-group">
+      <label for="youtube-URL">URL</label>
+      <input type="text" class="form-control" id="youtube-URL" placeholder="Youtube URL" name="Url" [(ngModel)]="widget.url" required>
+    </div>
+    <div class="form-group">
+      <label for="youtube-width">Width</label>
+      <input type="text" class="form-control" id="youtube-width" placeholder="100%" name="Width" [(ngModel)]="widget.width" required>
+    </div>
+  </form>
+  <a class="btn btn-danger btn-block" routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget" (click)="delete()">Delete</a>
+</div>
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <ul class="navbar-nav ml-auto">
+    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}">
+      <span class="fa fa-user"></span>
+    </a>
+  </ul>
+</nav>
