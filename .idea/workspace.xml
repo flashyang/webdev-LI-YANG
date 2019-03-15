@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb453e90-a289-4ae6-b80a-26a88cae6de0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/webdev/3rdpartylicenses.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/assets/uploads/05ecb37814ad1b48fc26c0d5181271dc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/assets/uploads/23c07e8d7851630b70c4b5e50e61366d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/assets/uploads/27dc5457cc75f42c904da279b9f3dfb7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/main.245e08bbe8b2d8247929.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/polyfills.f5ce8ecea387adbb1689.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/runtime.b57bf819d5bdce77f1c7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/styles.2c151e09ba5cc1e363dc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/website/website-edit/website-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/website/website-edit/website-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/website/website-new/website-new.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/website/website-new/website-new.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/services/widget.service.server.js" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/services/widget.service.server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,11 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user.model.client.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.model.client.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/model/user.model.client.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widget.service.server.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assignment/services/widget.service.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="131" column="6" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -78,7 +76,6 @@
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-youtube/widget-youtube.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/widget-image.component.ts" />
         <option value="$PROJECT_DIR$/assignment/services/user.service.server.js" />
-        <option value="$PROJECT_DIR$/assignment/services/widget.service.server.js" />
         <option value="$PROJECT_DIR$/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/widget-image.component.html" />
@@ -108,6 +105,7 @@
         <option value="$PROJECT_DIR$/src/app/components/website/website-new/website-new.component.ts" />
         <option value="$PROJECT_DIR$/src/app/components/website/website-edit/website-edit.component.ts" />
         <option value="$PROJECT_DIR$/src/app/model/user.model.client.ts" />
+        <option value="$PROJECT_DIR$/assignment/services/widget.service.server.js" />
       </list>
     </option>
   </component>
@@ -153,6 +151,17 @@
             <path>
               <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
@@ -248,12 +257,12 @@
       <workItem from="1549501459019" duration="295000" />
       <workItem from="1549591559552" duration="8210000" />
       <workItem from="1550194697833" duration="6456000" />
-      <workItem from="1550203778017" duration="93294000" />
+      <workItem from="1550203778017" duration="93596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134810000" />
+    <option name="totallyTimeSpent" value="135112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -545,13 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/services/widget.service.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="106" column="32" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/widget/widget-list/widget-list.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
@@ -716,6 +718,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/services/widget.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="131" column="6" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
         </state>
       </provider>
     </entry>

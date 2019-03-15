@@ -129,7 +129,8 @@ module.exports = function(app){
     var websiteId = req.body.websiteId;
     var pageId = req.body.pageId;
 
-    let baseUrl = "http://localhost:3200/";
+    //let baseUrl = "http://localhost:3200/";
+    let baseUrl = "https://webdev-yangli-cs5610.herokuapp.com"
     let callbackUrl = baseUrl + "user/" + userId +"/website/"+ websiteId+ "/page/" + pageId + "/widget";
 
     if(myFile == null) {
