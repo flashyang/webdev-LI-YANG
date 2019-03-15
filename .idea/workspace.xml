@@ -2,53 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb453e90-a289-4ae6-b80a-26a88cae6de0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assignment/pipes/safe/safe.pipe.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment/pipes/safe/safe.pipe.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/model/page.model.client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/model/user.model.client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/model/website.model.client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/model/widget.model.client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/webdev/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/webdev/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/webdev/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/webdev/vendor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webdev/vendor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/webdev/vendor.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/page-edit/page-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/page-edit/page-edit.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/page-edit/page-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/page-edit/page-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/page-list/page-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/page-list/page-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/page-new/page-new.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/page-new/page-new.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/page-new/page-new.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/page-new/page-new.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/user/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/user/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/user/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/user/profile/profile.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/user/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/user/profile/profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/user/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/user/register/register.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/website/website-edit/website-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/website/website-edit/website-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/website/website-list/website-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/website/website-list/website-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/website/website-new/website-new.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/website/website-new/website-new.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/widget/widget-chooser/widget-chooser.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/widget/widget-chooser/widget-chooser.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-header/widget-header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-header/widget-header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/widget-image.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/widget-image.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/widget-image.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/widget-image.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-youtube/widget-youtube.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-youtube/widget-youtube.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-youtube/widget-youtube.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-youtube/widget-youtube.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/widget/widget-list/widget-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/widget/widget-list/widget-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/widget/widget-list/widget-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/widget/widget-list/widget-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/page.service.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/page.service.client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/user.service.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/user.service.client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/website.service.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/website.service.client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/widget.service.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/widget.service.client.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -72,11 +27,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="365">
               <caret line="29" column="19" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="environment.prod.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/environments/environment.prod.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Procfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -131,14 +109,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assignment/services/user.service.server.js" />
         <option value="$PROJECT_DIR$/Assignment/services/website.mock.server.js" />
         <option value="$PROJECT_DIR$/Assignment/services/website.service.server.js" />
         <option value="$PROJECT_DIR$/Assignment/services/widget.mock.server.js" />
         <option value="$PROJECT_DIR$/Assignment/services/widget.service.server.js" />
         <option value="$PROJECT_DIR$/Assignment/app.js" />
         <option value="$PROJECT_DIR$/Assignment/services/page.service.server.js" />
-        <option value="$PROJECT_DIR$/src/environments/environment.prod.ts" />
         <option value="$PROJECT_DIR$/src/environments/environment.ts" />
         <option value="$PROJECT_DIR$/src/app/components/user/profile/profile.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/user/register/register.component.ts" />
@@ -182,6 +158,8 @@
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-list/widget-list.component.html" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/src/environments/environment.prod.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -231,30 +209,6 @@
             <path>
               <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="pipes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="pipes" type="462c0819:PsiDirectoryNode" />
-              <item name="order-by-pipe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -293,6 +247,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="environments" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -350,12 +310,12 @@
       <workItem from="1549501459019" duration="295000" />
       <workItem from="1549591559552" duration="8210000" />
       <workItem from="1550194697833" duration="6456000" />
-      <workItem from="1550203778017" duration="90492000" />
+      <workItem from="1550203778017" duration="90814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132008000" />
+    <option name="totallyTimeSpent" value="132330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -410,26 +370,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/components/user/register/register.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tslint.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/website/website-edit/website-edit.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/website/website-edit/website-edit.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -666,13 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/directives/sortable.directive.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -830,6 +763,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
           <caret line="29" column="19" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/environments/environment.prod.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
         </state>
       </provider>
     </entry>
