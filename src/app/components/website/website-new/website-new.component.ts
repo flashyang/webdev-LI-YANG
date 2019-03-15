@@ -22,11 +22,15 @@ export class WebsiteNewComponent implements OnInit {
     this.activatedRoute.params.subscribe(
       (params: any) => {
         this.userId = params['uid'];
+        return this.websiteService.findWebsitesByUser(this.userId).subscribe(websites => {
+          let x;
+          for (x in websites) {
+            this.websites.push(websites[x]);
+          }
+        });
+
       }
     );
-
-    this.websites = this.websiteService.findWebsitesByUser(this.userId);
-
   }
 
   create() {
@@ -35,8 +39,10 @@ export class WebsiteNewComponent implements OnInit {
       developerId: this.userId,
       description: this.createForm.value.description
     };
-    console.log(newWebsite);
-    this.website = this.websiteService.createWebsite(newWebsite);
+    return this.websiteService.createWebsite(newWebsite).subscribe(website => {
+      this.website = website;
+      console.log(newWebsite);
+    });
   }
 
 

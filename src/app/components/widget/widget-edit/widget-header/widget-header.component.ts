@@ -21,15 +21,15 @@ export class WidgetHeaderComponent implements OnInit {
   }
 
   update() {
-    const newWidget = {
-      text: this.createForm.value.text,
-      size: this.createForm.value.size
-    };
-    this.widgetService.updateWidget(this.widget._id, newWidget);
+    return this.widgetService.updateWidget(this.widget._id, this.widget).subscribe(widget => {
+      console.log('update');
+    });
   }
 
   delete() {
-    this.widgetService.deleteWidget(this.widget._id);
+    return this.widgetService.deleteWidget(this.widget._id).subscribe(data => {
+      console.log('delete');
+    });
   }
 
 }

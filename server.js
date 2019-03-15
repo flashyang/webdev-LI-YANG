@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Point static path to dist -- For building -- REMOVE
 app.use(express.static(path.join(__dirname, 'dist/webdev')));
+app.use(express.static(path.join(__dirname, 'src/assets')));
 
 // CORS
 app.use(function(req, res, next) {
@@ -23,6 +24,11 @@ app.use(function(req, res, next) {
 const port = process.env.PORT || '3200';
 app.set('port', port);
 
+require("./assignment/app")(app);
+
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'dist/webdev/index.html'));
+});
 
 // Create HTTP server
 const server = http.createServer(app);

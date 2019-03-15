@@ -22,7 +22,7 @@
     </div>
     <div class="form-group">
       <label for="page-title"><h5>Title</h5></label>
-      <input type="text" class="form-control" id="page-title" placeholder="Page Title" name="description" [(ngModel)]="page.description" required>
+      <input type="text" class="form-control" id="page-title" placeholder="Page Title" name="title" [(ngModel)]="page.title" required>
     </div>
     <a class="btn btn-danger  btn-block"
        (click)="delete()" routerLink="/user/{{userId}}/website/{{websiteId}}/page">Delete</a>

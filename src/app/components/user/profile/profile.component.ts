@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {UserService} from '../../../services/user.service.client';
 import {ActivatedRoute} from '@angular/router';
 import {NgForm} from '@angular/forms';
+import {User} from '../../../model/user.model.client';
 
 
 @Component({
@@ -11,25 +12,21 @@ import {NgForm} from '@angular/forms';
 })
 export class ProfileComponent implements OnInit {
   user;
-  userId: String;
 
   @ViewChild('inputForm') createForm: NgForm;
   constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   updateUser() {
-    const  newUser = {
-      _id: this.userId,
-      firstName: this.createForm.value.firstName,
-      lastName: this.createForm.value.lastName
-    };
-    this.user = this.userService.updateUser(newUser);
-    console.log('update');
+    return this.userService.updateUser(this.user, this.user._id).subscribe((user: User) => {
+      this.user = user;
+    });
   }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.userId = params['uid'];
-      this.user = this.userService.findUserById(this.userId);
+      return this.userService.findUserById(params['uid']).subscribe(user => {
+        this.user = user;
+      });
     });
   }
 

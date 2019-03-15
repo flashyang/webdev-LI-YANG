@@ -13,7 +13,7 @@ export class PageNewComponent implements OnInit {
 
   userId: String;
   websiteId: String;
-  website;
+  page;
 
   constructor(private pageService: PageService, private activatedRoute: ActivatedRoute) { }
 
@@ -30,10 +30,11 @@ export class PageNewComponent implements OnInit {
     const new_page = {
       name: this.createForm.value.name,
       websiteId: this.websiteId,
-      description: this.createForm.value.description
+      title: this.createForm.value.title
     };
-    console.log(new_page);
-    this.pageService.createPage(new_page);
+    return this.pageService.createPage(new_page).subscribe(page => {
+      this.page = page;
+    });
   }
 
 }

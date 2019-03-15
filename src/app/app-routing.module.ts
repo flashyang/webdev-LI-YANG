@@ -1,5 +1,5 @@
-// import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
 
 import {LoginComponent} from './components/user/login/login.component';
 import {RegisterComponent} from './components/user/register/register.component';
@@ -15,6 +15,7 @@ import {WidgetChooserComponent} from './components/widget/widget-chooser/widget-
 import {WidgetEditComponent} from './components/widget/widget-edit/widget-edit.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'user/:uid', component: ProfileComponent},
@@ -29,4 +30,11 @@ const routes: Routes = [
   {path: 'user/:uid/website/:wid/page/:pid/widget/:wgid', component: WidgetEditComponent}
 ];
 
-export const AppRoutingModule = RouterModule.forRoot(routes)
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+  providers: []
+})
+export class AppRoutingModule { }
+
+//export const AppRoutingModule = RouterModule.forRoot(routes)

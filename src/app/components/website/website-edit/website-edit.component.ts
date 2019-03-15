@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {WebsiteService} from '../../../services/website.service.client';
 import {ActivatedRoute} from '@angular/router';
 import {NgForm} from '@angular/forms';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-website-edit',
@@ -18,32 +19,42 @@ export class WebsiteEditComponent implements OnInit {
   websites = [];
 
 
-  constructor(private websiteService: WebsiteService, private activatedRoute: ActivatedRoute) { }
+  constructor(private websiteService: WebsiteService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(
       (params: any) => {
         this.userId = params['uid'];
         this.website_id = params['wid'];
+        return this.websiteService.findWebsitesById(this.userId, this.website_id).subscribe(website => {
+          this.website = website;
+          return this.websiteService.findWebsitesByUser(this.userId).subscribe(websites => {
+            let x;
+            for (x in websites) {
+              this.websites.push(websites[x]);
+            }
+          });
+        });
       }
     );
-    this.website = this.websiteService.findWebsitesById(this.website_id);
-    this.websites = this.websiteService.findWebsitesByUser(this.userId);
   }
 
   delete() {
-    console.log('delete website');
-    this.websiteService.deleteWebsite(this.website_id);
+    return this.websiteService.deleteWebsite(this.userId, this.website_id).subscribe(data => {
+      console.log('delete website');
+    });
   }
 
   update() {
-    console.log('update');
     const newWebsite = {
+      _id: this.website_id,
       name: this.createForm.value.name,
       developerId: this.userId,
       description: this.createForm.value.description
     };
-    this.websiteService.updateWebsite(this.website_id, newWebsite);
+    return this.websiteService.updateWebsite(newWebsite).subscribe(website => {
+      this.website = website;
+    });
   }
 
 }

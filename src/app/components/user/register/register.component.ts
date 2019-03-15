@@ -27,8 +27,7 @@ export class RegisterComponent implements OnInit {
         firstName: this.registerForm.value.firstName,
         lastName: this.registerForm.value.lastName
       };
-      this.userService.createUser(newUser);
-      console.log('register!');
+      this.userService.createUser(newUser).subscribe(user => console.log('register!'));
     } else {
       this.errorFlag = true;
     }

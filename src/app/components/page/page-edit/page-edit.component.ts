@@ -24,25 +24,29 @@ export class PageEditComponent implements OnInit {
         this.userId = params['uid'];
         this.websiteId = params['wid'];
         this.pageId = params['pid'];
+        return this.pageService.findPageById(this.pageId).subscribe(page => {
+          console.log(page);
+          this.page = page;
+        });
       }
     );
-
-    this.page = this.pageService.findPageById(this.pageId);
   }
 
   delete() {
-    console.log('delete page');
-    this.pageService.deletePage(this.pageId);
+    return this.pageService.deletePage(this.pageId).subscribe(date => {
+      console.log('delete page');
+    });
   }
 
   update() {
-    console.log('update');
     const newPage = {
       name: this.updateForm.value.name,
       websiteId: this.websiteId,
-      description: this.updateForm.value.description
+      title: this.updateForm.value.title
     };
-    this.pageService.updatePage(this.pageId, newPage);
+    return this.pageService.updatePage(this.pageId, newPage).subscribe(page => {
+      this.page = page;
+    });
   }
 
 }

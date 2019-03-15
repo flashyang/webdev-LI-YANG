@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild} from '@angular/core';
 import {WidgetService} from '../../../../services/widget.service.client';
 import {NgForm} from '@angular/forms';
+import {environment} from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-widget-image',
@@ -14,6 +15,7 @@ export class WidgetImageComponent implements OnInit {
   @Input() websiteId;
   @Input() pageId;
   @ViewChild('inputForm') createForm: NgForm;
+  baseUrl = environment.baseUrl;
 
   constructor(private widgetService: WidgetService) { }
 
@@ -21,16 +23,15 @@ export class WidgetImageComponent implements OnInit {
   }
 
   update() {
-    const newWidget = {
-      text: this.createForm.value.text,
-      url: this.createForm.value.url,
-      width: this.createForm.value.width
-    };
-    this.widgetService.updateWidget(this.widget._id, newWidget);
+    return this.widgetService.updateWidget(this.widget._id, this.widget).subscribe(widget => {
+      console.log('update');
+    });
   }
 
   delete() {
-    this.widgetService.deleteWidget(this.widget._id);
+    return this.widgetService.deleteWidget(this.widget._id).subscribe(data => {
+      console.log('delete');
+    });
   }
 
 }

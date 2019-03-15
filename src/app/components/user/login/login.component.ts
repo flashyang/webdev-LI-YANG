@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import { Router} from '@angular/router';
 import {NgForm} from '@angular/forms';
 import {UserService} from '../../../services/user.service.client';
+import {User} from '../../../model/user.model.client';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +12,6 @@ import {UserService} from '../../../services/user.service.client';
 export class LoginComponent implements OnInit {
 
   @ViewChild('inputForm') loginForm: NgForm;
-  username: String;
-  password: String;
 
   errorFlag: boolean;
   errorMsg = 'Invalid username or password !';
@@ -21,18 +20,18 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('login page!' + this.username);
   }
 
   login() {
     const username = this.loginForm.value.username;
     const password = this.loginForm.value.password;
-    const user = this.userService.findUserByCredentials(username, password);
-    if (user)  {
-      this.router.navigate(['/user', user._id]);
-    } else {
-      this.errorFlag = true;
-    }
+    return this.userService.findUserByCredentials(username, password).subscribe((user: User) => {
+      if (user)  {
+        this.router.navigate(['/user', user._id]);
+      } else {
+        this.errorFlag = true;
+      }
+    });
   }
 
 }

@@ -23,6 +23,11 @@ import {UserService} from './services/user.service.client';
 import {PageService} from './services/page.service.client';
 import {WidgetService} from './services/widget.service.client';
 import {WebsiteService} from './services/website.service.client';
+import { SortableDirective } from '../../assignment/directives/sortable.directive';
+import {OrderByPipe} from '../../assignment/pipes/order-by-pipe/order-by-pipe.pipe';
+import {SafePipe} from '../../assignment/pipes/safe/safe.pipe';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,12 +46,16 @@ import {WebsiteService} from './services/website.service.client';
     WidgetListComponent,
     WidgetHeaderComponent,
     WidgetImageComponent,
-    WidgetYoutubeComponent
+    WidgetYoutubeComponent,
+    SortableDirective,
+    OrderByPipe,
+    SafePipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [UserService, PageService, WebsiteService, WidgetService],
   bootstrap: [AppComponent]
