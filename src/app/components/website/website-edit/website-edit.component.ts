@@ -50,7 +50,7 @@ export class WebsiteEditComponent implements OnInit {
       developerId: this.userId,
       description: this.createForm.value.description
     };
-    return this.websiteService.updateWebsite(newWebsite).subscribe(website => {
+    return this.websiteService.updateWebsite(newWebsite).subscribe((website: Website) => {
       this.website = website;
     });
   }

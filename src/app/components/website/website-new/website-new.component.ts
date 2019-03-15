@@ -37,7 +37,7 @@ export class WebsiteNewComponent implements OnInit {
       developerId: this.userId,
       description: this.createForm.value.description
     };
-    return this.websiteService.createWebsite(newWebsite).subscribe(website => {
+    return this.websiteService.createWebsite(newWebsite).subscribe((website: Website) => {
       this.website = website;
       console.log(newWebsite);
     });
