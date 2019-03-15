@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild} from '@angular/core';
 import {PageService} from '../../../services/page.service.client';
 import {ActivatedRoute} from '@angular/router';
 import {NgForm} from '@angular/forms';
+import {Page} from '../../../model/page.model.client';
 
 @Component({
   selector: 'app-page-new',
@@ -13,7 +14,7 @@ export class PageNewComponent implements OnInit {
 
   userId: String;
   websiteId: String;
-  page;
+  page: Page;
 
   constructor(private pageService: PageService, private activatedRoute: ActivatedRoute) { }
 
@@ -32,7 +33,7 @@ export class PageNewComponent implements OnInit {
       websiteId: this.websiteId,
       title: this.createForm.value.title
     };
-    return this.pageService.createPage(new_page).subscribe(page => {
+    return this.pageService.createPage(new_page).subscribe((page: Page) => {
       this.page = page;
     });
   }

@@ -14,7 +14,7 @@ export class WidgetEditComponent implements OnInit {
   websiteId: String;
   pageId: String;
   widgetId: String;
-  widget = {};
+  widget: Widget;
 
   constructor(private widgetService: WidgetService, private activatedRoute: ActivatedRoute) { }
 

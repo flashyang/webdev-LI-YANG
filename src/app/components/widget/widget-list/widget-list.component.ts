@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {WidgetService} from '../../../services/widget.service.client';
 import {ActivatedRoute} from '@angular/router';
 import {DomSanitizer} from '@angular/platform-browser';
+import {Widget} from '../../../model/widget.model.client';
 
 @Component({
   selector: 'app-widget-list',
@@ -13,7 +14,7 @@ export class WidgetListComponent implements OnInit {
   userId: String;
   websiteId: String;
   pageId: String;
-  widgets = [];
+  widgets: Widget[] = [];
 
   constructor(private widgetService: WidgetService, private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer) { }
 
@@ -23,11 +24,12 @@ export class WidgetListComponent implements OnInit {
         this.userId = params['uid'];
         this.websiteId = params['wid'];
         this.pageId = params['pid'];
-        return this.widgetService.findWidgetsByPageId(this.pageId).subscribe(widgets => {
-          let x;
-          for (x in widgets) {
-            this.widgets.push(widgets[x]);
-          }
+        return this.widgetService.findWidgetsByPageId(this.pageId).subscribe((widgets: Widget[])  => {
+          this.widgets = widgets;
+          // let x;
+          // for (x in widgets) {
+          //   this.widgets.push(widgets[x]);
+          // }
         });
       }
     );

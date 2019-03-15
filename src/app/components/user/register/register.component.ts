@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {UserService} from '../../../services/user.service.client';
 import {NgForm} from '@angular/forms';
+import {User} from '../../../model/user.model.client';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,7 @@ import {NgForm} from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   @ViewChild('inputForm') registerForm: NgForm;
-  user;
+  user: User;
   errorFlag: boolean;
   errorMsg = 'Password mis-matching!';
 
@@ -27,7 +28,7 @@ export class RegisterComponent implements OnInit {
         firstName: this.registerForm.value.firstName,
         lastName: this.registerForm.value.lastName
       };
-      this.userService.createUser(newUser).subscribe(user => console.log('register!'));
+      this.userService.createUser(newUser).subscribe((user: User) => console.log('register!'));
     } else {
       this.errorFlag = true;
     }

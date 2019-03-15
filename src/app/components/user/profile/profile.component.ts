@@ -11,7 +11,7 @@ import {User} from '../../../model/user.model.client';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  user;
+  user: User;
 
   @ViewChild('inputForm') createForm: NgForm;
   constructor(private userService: UserService, private route: ActivatedRoute) { }
@@ -24,7 +24,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      return this.userService.findUserById(params['uid']).subscribe(user => {
+      return this.userService.findUserById(params['uid']).subscribe((user: User) => {
         this.user = user;
       });
     });

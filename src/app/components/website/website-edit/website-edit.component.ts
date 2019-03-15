@@ -3,6 +3,7 @@ import {WebsiteService} from '../../../services/website.service.client';
 import {ActivatedRoute} from '@angular/router';
 import {NgForm} from '@angular/forms';
 import { Router} from '@angular/router';
+import {Website} from '../../../model/website.model.client';
 
 @Component({
   selector: 'app-website-edit',
@@ -15,8 +16,8 @@ export class WebsiteEditComponent implements OnInit {
 
   userId: String;
   website_id;
-  website;
-  websites = [];
+  website: Website;
+  websites: Website[] = [];
 
 
   constructor(private websiteService: WebsiteService, private activatedRoute: ActivatedRoute, private router: Router) { }
@@ -26,13 +27,10 @@ export class WebsiteEditComponent implements OnInit {
       (params: any) => {
         this.userId = params['uid'];
         this.website_id = params['wid'];
-        return this.websiteService.findWebsitesById(this.userId, this.website_id).subscribe(website => {
+        return this.websiteService.findWebsitesById(this.userId, this.website_id).subscribe((website: Website) => {
           this.website = website;
-          return this.websiteService.findWebsitesByUser(this.userId).subscribe(websites => {
-            let x;
-            for (x in websites) {
-              this.websites.push(websites[x]);
-            }
+          return this.websiteService.findWebsitesByUser(this.userId).subscribe((websites: Website[]) => {
+            this.websites = websites;
           });
         });
       }
