@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="bb453e90-a289-4ae6-b80a-26a88cae6de0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/assignment/services/widget.service.server.js" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/services/widget.service.server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webdev/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webdev/assets/uploads/05ecb37814ad1b48fc26c0d5181271dc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webdev/assets/uploads/23c07e8d7851630b70c4b5e50e61366d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webdev/assets/uploads/27dc5457cc75f42c904da279b9f3dfb7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webdev/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webdev/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webdev/main.94c7c6682dd8cc1c0257.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webdev/polyfills.f5ce8ecea387adbb1689.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webdev/runtime.b57bf819d5bdce77f1c7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webdev/styles.2c151e09ba5cc1e363dc.css" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,8 +39,8 @@
       <file leaf-file-name="widget.service.server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assignment/services/widget.service.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="131" column="6" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
+            <state relative-caret-position="174">
+              <caret line="132" column="62" selection-start-line="132" selection-start-column="62" selection-end-line="132" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -257,12 +267,12 @@
       <workItem from="1549501459019" duration="295000" />
       <workItem from="1549591559552" duration="8210000" />
       <workItem from="1550194697833" duration="6456000" />
-      <workItem from="1550203778017" duration="93596000" />
+      <workItem from="1550203778017" duration="93984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135112000" />
+    <option name="totallyTimeSpent" value="135500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -273,9 +283,9 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" order="7" weight="0.25641027" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17758985" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17758985" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -723,8 +733,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment/services/widget.service.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="131" column="6" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
+        <state relative-caret-position="174">
+          <caret line="132" column="62" selection-start-line="132" selection-start-column="62" selection-end-line="132" selection-end-column="62" />
         </state>
       </provider>
     </entry>
