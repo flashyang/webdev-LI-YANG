@@ -24,12 +24,25 @@ app.use(function(req, res, next) {
 const port = process.env.PORT || '3200';
 app.set('port', port);
 
-require("./assignment/app")(app);
-
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'dist/webdev/index.html'));
-});
-
 // Create HTTP server
 const server = http.createServer(app);
 server.listen( port , () => console.log('Running on port 3200'));
+
+
+var connectionString = 'mongodb://cooler:2010cooler@ds113815.mlab.com:13815/heroku_xlvc3rq2';
+var mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
+const client = mongoose.connect( connectionString, { useNewUrlParser: true });
+
+//Get the default connection
+var db = mongoose.connection;
+
+//Bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+// app.get('*', function (req, res) {
+//   console.log("*");
+//   res.sendFile(path.join(__dirname, 'dist/webdev/index.html'));
+// });
+
+require("./assignment/app")(app);

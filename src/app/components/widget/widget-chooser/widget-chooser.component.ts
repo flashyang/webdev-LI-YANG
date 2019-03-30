@@ -31,9 +31,13 @@ export class WidgetChooserComponent implements OnInit {
       widgetType: type,
       pageId: this.pageId,
       size: 4,
+      name: '',
       text: 'default',
       url: '',
-      width: 4
+      width: 4,
+      rows: 0,
+      placeholder: '',
+      formatted: false
     };
     return this.widgetService.createWidget(newWidget).subscribe((widget: Widget) => {
       this.router.navigate(['/user/' + this.userId + '/website/' + this.websiteId + '/page/' + this.pageId + '/widget/' + widget._id]);

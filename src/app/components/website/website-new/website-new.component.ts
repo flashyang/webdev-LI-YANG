@@ -39,7 +39,6 @@ export class WebsiteNewComponent implements OnInit {
     };
     return this.websiteService.createWebsite(newWebsite).subscribe((website: Website) => {
       this.website = website;
-      console.log(newWebsite);
     });
   }
 

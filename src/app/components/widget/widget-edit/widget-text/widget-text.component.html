@@ -1,0 +1,51 @@
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <a class="navbar-brand" routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget">
+      <span class="fa fa-chevron-left rotate"></span>
+    </a>
+    <a class="navbar-text cl-text-bold" [routerLink]="">
+      Widgets Edit
+    </a>
+  </form>
+  <ul class="navbar-nav ml-auto">
+    <a (click)="update()" class="navbar-brand pull-right">
+      <span class="fa fa-check"></span>
+    </a>
+  </ul>
+</nav>
+
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="heading-name">Name</label>
+      <input [(ngModel)]="widget.name" type="text" class="form-control" id="heading-name" placeholder="Name" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="text-text">Text</label>
+      <input [(ngModel)]="widget.text" type="text" class="form-control" id="text-text" placeholder="Text" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="text-rows">Rows</label>
+      <input [(ngModel)]="widget.rows" type="number" class="form-control" id="text-rows" placeholder="Rows" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="text-placeholder">Placeholder</label>
+      <input [(ngModel)]="widget.placeholder" type="text" class="form-control" id="text-placeholder" placeholder="Placeholder" [ngModelOptions]="{standalone: true}" required>
+    </div>
+    <div class="input-group">
+      <input type="text" readonly value="Formatted" class="form-control"/>
+      <span class="input-group-addon">
+        <input [(ngModel)]="widget.formatted" type="checkbox" [ngModelOptions]="{standalone: true}"/>
+      </span>
+    </div><br/>
+  </form>
+  <a class="btn btn-danger btn-block" (click)="deleteWidget()">Delete</a>
+</div>
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <ul class="navbar-nav ml-auto">
+    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}">
+      <span class="fa fa-user"></span>
+    </a>
+  </ul>
+</nav>

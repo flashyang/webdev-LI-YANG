@@ -8,7 +8,7 @@
     </a>
   </form>
   <ul class="navbar-nav ml-auto">
-    <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget" (click)="update()" class="navbar-brand pull-right">
+    <a (click)="update()" class="navbar-brand pull-right">
       <span class="fa fa-check"></span>
     </a>
   </ul>
@@ -34,6 +34,7 @@
     <input  name="userId" value="{{userId}}" style="display: none"/>
     <button type="submit" class="btn btn-block btn-primary">Upload Image</button>
   </form>
+  <a class="btn btn-block btn-secondary" routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}/flickr" >Search</a>
   <a class="btn btn-danger  btn-block" routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget" (click)="delete()">Delete</a>
 </div>
 

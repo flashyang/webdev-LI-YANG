@@ -26,7 +26,6 @@ export class PageEditComponent implements OnInit {
         this.websiteId = params['wid'];
         this.pageId = params['pid'];
         return this.pageService.findPageById(this.pageId).subscribe((page: Page) => {
-          console.log(page);
           this.page = page;
         });
       }
@@ -46,7 +45,9 @@ export class PageEditComponent implements OnInit {
       title: this.updateForm.value.title
     };
     return this.pageService.updatePage(this.pageId, newPage).subscribe((page: Page) => {
-      this.page = page;
+      this.page.name = page.name;
+      this.page.websiteId = page.websiteId;
+      this.page.title = page.title;
     });
   }
 

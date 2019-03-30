@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
+import {Widget} from '../model/widget.model.client';
 
 @Injectable()
 export  class WidgetService {
@@ -10,14 +11,19 @@ export  class WidgetService {
   baseUrl = environment.baseUrl;
 
   createWidget(widget) {
-    const new_widget = {
-      _id: (new Date()).getTime() + '',
+    const newWidget = {
+      size: widget.size,
+      text: widget.text,
+      name: widget.name,
+      url: widget.url,
       widgetType: widget.widgetType,
       pageId: widget.pageId,
-      size: widget.size,
-      text: widget.text
+      width: widget.width,
+      rows: widget.rows,
+      placeholder: widget.placeholder,
+      formatted: widget.formatted
     };
-    return this.http.post(this.baseUrl + 'api/page/' + new_widget.pageId + '/widget', new_widget);
+    return this.http.post(this.baseUrl + 'api/page/' + newWidget.pageId + '/widget', newWidget);
   }
 
   findWidgetsByPageId(pageId) {
@@ -29,7 +35,19 @@ export  class WidgetService {
   }
 
   updateWidget(widgetId, widget) {
-    return this.http.put(this.baseUrl + 'api/widget/' + widgetId, widget);
+    const newWidget = {
+      size: widget.size,
+      text: widget.text,
+      name: widget.name,
+      url: widget.url,
+      widgetType: widget.widgetType,
+      pageId: widget.pageId,
+      width: widget.width,
+      rows: widget.rows,
+      placeholder: widget.placeholder,
+      formatted: widget.formatted
+    };
+    return this.http.put(this.baseUrl + 'api/widget/' + widgetId, newWidget);
   }
 
   deleteWidget(widgetId) {

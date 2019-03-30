@@ -9,15 +9,7 @@ export class WebsiteService {
   baseUrl = environment.baseUrl;
 
   createWebsite(website) {
-
-    const new_website = {
-      _id: (new Date()).getTime() + '',
-      name: website.name,
-      developerId: website.developerId,
-      description: website.description
-    };
-
-    return this.http.post(this.baseUrl + 'api/user/' + website.developerId + '/website', new_website);
+    return this.http.post(this.baseUrl + 'api/user/' + website.developerId + '/website', website);
   }
 
   findWebsitesByUser(userId) {
@@ -28,8 +20,8 @@ export class WebsiteService {
     return this.http.get(this.baseUrl + 'api/website/' + websiteId);
   }
 
-  updateWebsite(newWebSite) {
-    return this.http.put(this.baseUrl + 'api/website/' + newWebSite._id, newWebSite);
+  updateWebsite(newWebSite, webid) {
+    return this.http.put(this.baseUrl + 'api/website/' + webid, newWebSite);
   }
 
   deleteWebsite(userId, websiteId) {

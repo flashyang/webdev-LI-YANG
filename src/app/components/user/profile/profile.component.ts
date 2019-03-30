@@ -17,8 +17,17 @@ export class ProfileComponent implements OnInit {
   constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   updateUser() {
-    return this.userService.updateUser(this.user, this.user._id).subscribe((user: User) => {
-      this.user = user;
+    const newUser = {
+      username: this.user.username,
+      firstName: this.user.firstName,
+      lastName: this.user.lastName,
+      email: this.user.email,
+    };
+    return this.userService.updateUser(newUser, this.user._id).subscribe((user: User) => {
+      this.user.username = user.username;
+      this.user.firstName = user.firstName;
+      this.user.lastName = user.lastName;
+      this.user.email = user.email;
     });
   }
 

@@ -10,15 +10,7 @@ export class PageService {
   baseUrl = environment.baseUrl;
 
   createPage(page) {
-
-    const new_page = {
-      _id: (new Date()).getTime() + '',
-      name: page.name,
-      websiteId: page.websiteId,
-      title: page.title
-    };
-
-    return this.http.post(this.baseUrl + 'api/website/' + new_page.websiteId + '/page', new_page);
+    return this.http.post(this.baseUrl + 'api/website/' + page.websiteId + '/page', page);
   }
 
   findPageByWebsiteId(websiteId) {

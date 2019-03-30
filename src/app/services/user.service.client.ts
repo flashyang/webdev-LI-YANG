@@ -12,8 +12,7 @@ export class UserService {
   baseUrl = environment.baseUrl;
 
   createUser(user) {
-    const new_user = new User((new Date()).getTime() + '', user.username, user.password, user.firstName, user.lastName);
-    return this.http.post(this.baseUrl + 'api/user', new_user);
+    return this.http.post(this.baseUrl + 'api/user', user);
   }
 
   findUserById(userId) {

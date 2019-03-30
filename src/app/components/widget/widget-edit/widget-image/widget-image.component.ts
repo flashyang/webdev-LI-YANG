@@ -2,6 +2,7 @@ import { Component, OnInit, Input, ViewChild} from '@angular/core';
 import {WidgetService} from '../../../../services/widget.service.client';
 import {NgForm} from '@angular/forms';
 import {environment} from '../../../../../environments/environment';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-widget-image',
@@ -17,14 +18,14 @@ export class WidgetImageComponent implements OnInit {
   @ViewChild('inputForm') createForm: NgForm;
   baseUrl = environment.baseUrl;
 
-  constructor(private widgetService: WidgetService) { }
+  constructor(private widgetService: WidgetService, private router: Router) { }
 
   ngOnInit() {
   }
 
   update() {
-    return this.widgetService.updateWidget(this.widget._id, this.widget).subscribe(widget => {
-      console.log('update');
+    return this.widgetService.updateWidget(this.widget._id, this.widget).subscribe(data => {
+      this.router.navigate(['/user/' + this.userId + '/website/' + this.websiteId + '/page/' + this.pageId + '/widget']);
     });
   }
 

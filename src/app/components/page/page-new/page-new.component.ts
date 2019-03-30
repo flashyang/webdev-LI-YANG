@@ -34,7 +34,7 @@ export class PageNewComponent implements OnInit {
       title: this.createForm.value.title
     };
     return this.pageService.createPage(new_page).subscribe((page: Page) => {
-      this.page = page;
+      console.log('create');
     });
   }
 

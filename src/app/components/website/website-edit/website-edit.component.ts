@@ -45,13 +45,14 @@ export class WebsiteEditComponent implements OnInit {
 
   update() {
     const newWebsite = {
-      _id: this.website_id,
       name: this.createForm.value.name,
       developerId: this.userId,
       description: this.createForm.value.description
     };
-    return this.websiteService.updateWebsite(newWebsite).subscribe((website: Website) => {
-      this.website = website;
+    return this.websiteService.updateWebsite(newWebsite, this.website._id).subscribe((website: Website) => {
+      this.website.name = website.name;
+      this.website.developerId = website.developerId;
+      this.website.description = website.description;
     });
   }
 
