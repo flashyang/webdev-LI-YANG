@@ -120,8 +120,7 @@ module.exports = function(app){
     let callbackUrl = baseUrl + "user/" + userId +"/website/"+ websiteId+ "/page/" + pageId + "/widget";
 
     if(myFile == null) {
-      //return res.redirect(callbackUrl);
-      return res.status(404);
+      return res.redirect(callbackUrl);
     }
 
     var originalname  = myFile.originalname; // file name on user's computer
@@ -131,19 +130,14 @@ module.exports = function(app){
     var size          = myFile.size;
     var mimetype      = myFile.mimetype;
 
-    // widget = getWidgetById(widgetId);
-    // widget.url = '/uploads/'+filename;
-    //
-    // //return res.redirect(callbackUrl);
-    // return res.json('update');
-
 
     if (!widgetId) {
       var tobeCreated = {_id: undefined, widgetType: 'IMAGE', pageId: pageId, size: size, text: 'text', width:'100%',
         url:'/uploads/' + filename, formatted: false};
       widgetModel.createWidget(pageId, tobeCreated)
         .then(function (widget){
-          return res.json('create');
+          //return res.json('create');
+          return res.redirect(callbackUrl)
         }, function(err) {
         });
     } else {
@@ -152,7 +146,8 @@ module.exports = function(app){
           foundWidget.url = '/uploads/' + filename;
           widgetModel.updateWidget(foundWidget._id, foundWidget)
             .then(function(status) {
-              return res.json('upload');
+              //return res.json('upload');
+              return res.redirect(callbackUrl)
             }, function(err) {
             });
         });

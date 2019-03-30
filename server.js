@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'dist/webdev')));
 app.use(express.static(path.join(__dirname, 'src/assets')));
 
+
+
 // CORS
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -40,9 +42,9 @@ var db = mongoose.connection;
 //Bind connection to error event (to get notification of connection errors)
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-// app.get('*', function (req, res) {
-//   console.log("*");
-//   res.sendFile(path.join(__dirname, 'dist/webdev/index.html'));
-// });
 
 require("./assignment/app")(app);
+
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'dist/webdev/index.html'));
+});
