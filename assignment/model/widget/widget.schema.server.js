@@ -14,6 +14,7 @@ var widgetSchema = mongoose.Schema({
   size: Number,
   "class": String,
   icon: String,
+  text: String,
   deletable: Boolean,
   formatted: Boolean,
   dateCreated: {type: Date, default: Date.now}

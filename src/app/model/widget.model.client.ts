@@ -6,6 +6,10 @@ export class Widget {
   text: String;
   url: String;
   width: String;
+  placeholder: String;
+  name: String;
+  rows: BigInteger;
+  formatted: ConstrainBoolean;
 
   constructor(_id, type, pageId, size= '1', text = 'text', width = '100%', url = 'url') {
     this._id = _id;

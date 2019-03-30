@@ -54,7 +54,6 @@
       </div>
 
       <div *ngSwitchCase="'HTML'" [innerHTML]="widget.text">
-        <h1>ca ca ca ca</h1>
         <div class="pull-right">
           <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}">
             <span class="fa fa-cog"></span>
@@ -63,7 +62,6 @@
       </div>
 
       <div *ngSwitchCase="'TEXT'">
-        <h1>duo duo duo duo</h1>
         <div class="pull-right">
           <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}">
             <span class="fa fa-cog"></span>
