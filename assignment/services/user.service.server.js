@@ -63,7 +63,8 @@ module.exports = function (app) {
             firstName: names[0],
             email: profile.emails ? profile.emails[0].value:"",
             facebook: { id: profile.id, token: token}
-          }; return userModel.createUser(newFacebookUser);
+          };
+          return userModel.createUser(newFacebookUser);
         }
         }, function(err) {
         if (err) {
@@ -93,7 +94,7 @@ module.exports = function (app) {
   app.delete("/api/user/:userId", deleteUser);
   app.get ('/facebook/login', passport.authenticate('facebook', { scope : 'email' }));
 
-  app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/#/profile', failureRedirect: '/#/login' }));
+  app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/profile', failureRedirect: '/login' }));
 
   function login(req, res) {
     var user = req.user;
