@@ -5,13 +5,6 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 
 module.exports = function (app) {
 
-  //
-  // var facebookConfig = {
-  //   clientID : '2356209677946197',//process.env.FACEBOOK_CLIENT_ID,
-  //   clientSecret : 'f703c6a374da5f683dd13f043ebc54be',//process.env.FACEBOOK_CLIENT_SECRET,
-  //   callbackURL : 'mongodb://heroku_xlvc3rq2:v9glk7aplstlil9vqr10ntiaek@ds113815.mlab.com:13815/heroku_xlvc3rq2'//process.env.FACEBOOK_CALLBACK_URL
-  // };
-
   const facebookConfig = {
     clientID : process.env.FACEBOOK_CLIENT_ID,
     clientSecret : process.env.FACEBOOK_CLIENT_SECRET,
