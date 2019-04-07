@@ -117,7 +117,7 @@ module.exports = function(app){
 
     //let baseUrl = "http://localhost:3200/";
     let baseUrl = "https://webdev-yangli-cs5610.herokuapp.com/";
-    let callbackUrl = baseUrl + "user/" + userId +"/website/"+ websiteId+ "/page/" + pageId + "/widget";
+    let callbackUrl = baseUrl + "user/website/"+ websiteId+ "/page/" + pageId + "/widget";
 
     if(myFile == null) {
       return res.redirect(callbackUrl);
