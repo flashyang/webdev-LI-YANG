@@ -182,6 +182,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_widget_widget_chooser_widget_chooser_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/widget/widget-chooser/widget-chooser.component */ "./src/app/components/widget/widget-chooser/widget-chooser.component.ts");
 /* harmony import */ var _components_widget_widget_edit_widget_edit_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/widget/widget-edit/widget-edit.component */ "./src/app/components/widget/widget-edit/widget-edit.component.ts");
 /* harmony import */ var _components_widget_widget_edit_widget_image_flickr_image_search_flickr_image_search_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component */ "./src/app/components/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component.ts");
+/* harmony import */ var _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./services/auth-guard.service */ "./src/app/services/auth-guard.service.ts");
+
 
 
 
@@ -202,17 +204,17 @@ var routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: _components_user_login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] },
     { path: 'register', component: _components_user_register_register_component__WEBPACK_IMPORTED_MODULE_4__["RegisterComponent"] },
-    { path: 'user/:uid', component: _components_user_profile_profile_component__WEBPACK_IMPORTED_MODULE_5__["ProfileComponent"] },
-    { path: 'user/:uid/website', component: _components_website_website_list_website_list_component__WEBPACK_IMPORTED_MODULE_10__["WebsiteListComponent"] },
-    { path: 'user/:uid/website/new', component: _components_website_website_new_website_new_component__WEBPACK_IMPORTED_MODULE_11__["WebsiteNewComponent"] },
-    { path: 'user/:uid/website/:wid', component: _components_website_website_edit_website_edit_component__WEBPACK_IMPORTED_MODULE_9__["WebsiteEditComponent"] },
-    { path: 'user/:uid/website/:wid/page', component: _components_page_page_list_page_list_component__WEBPACK_IMPORTED_MODULE_7__["PageListComponent"] },
-    { path: 'user/:uid/website/:wid/page/new', component: _components_page_page_new_page_new_component__WEBPACK_IMPORTED_MODULE_8__["PageNewComponent"] },
-    { path: 'user/:uid/website/:wid/page/:pid', component: _components_page_page_edit_page_edit_component__WEBPACK_IMPORTED_MODULE_6__["PageEditComponent"] },
-    { path: 'user/:uid/website/:wid/page/:pid/widget', component: _components_widget_widget_list_widget_list_component__WEBPACK_IMPORTED_MODULE_12__["WidgetListComponent"] },
-    { path: 'user/:uid/website/:wid/page/:pid/widget/new', component: _components_widget_widget_chooser_widget_chooser_component__WEBPACK_IMPORTED_MODULE_13__["WidgetChooserComponent"] },
-    { path: 'user/:uid/website/:wid/page/:pid/widget/:wgid', component: _components_widget_widget_edit_widget_edit_component__WEBPACK_IMPORTED_MODULE_14__["WidgetEditComponent"] },
-    { path: 'user/:uid/website/:wid/page/:pid/widget/:wgid/flickr', component: _components_widget_widget_edit_widget_image_flickr_image_search_flickr_image_search_component__WEBPACK_IMPORTED_MODULE_15__["FlickrImageSearchComponent"] },
+    { path: 'profile', component: _components_user_profile_profile_component__WEBPACK_IMPORTED_MODULE_5__["ProfileComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
+    { path: 'user/website', component: _components_website_website_list_website_list_component__WEBPACK_IMPORTED_MODULE_10__["WebsiteListComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
+    { path: 'user/website/new', component: _components_website_website_new_website_new_component__WEBPACK_IMPORTED_MODULE_11__["WebsiteNewComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
+    { path: 'user/website/:wid', component: _components_website_website_edit_website_edit_component__WEBPACK_IMPORTED_MODULE_9__["WebsiteEditComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
+    { path: 'user/website/:wid/page', component: _components_page_page_list_page_list_component__WEBPACK_IMPORTED_MODULE_7__["PageListComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
+    { path: 'user/website/:wid/page/new', component: _components_page_page_new_page_new_component__WEBPACK_IMPORTED_MODULE_8__["PageNewComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
+    { path: 'user/website/:wid/page/:pid', component: _components_page_page_edit_page_edit_component__WEBPACK_IMPORTED_MODULE_6__["PageEditComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
+    { path: 'user/website/:wid/page/:pid/widget', component: _components_widget_widget_list_widget_list_component__WEBPACK_IMPORTED_MODULE_12__["WidgetListComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
+    { path: 'user/website/:wid/page/:pid/widget/new', component: _components_widget_widget_chooser_widget_chooser_component__WEBPACK_IMPORTED_MODULE_13__["WidgetChooserComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
+    { path: 'user/website/:wid/page/:pid/widget/:wgid', component: _components_widget_widget_edit_widget_edit_component__WEBPACK_IMPORTED_MODULE_14__["WidgetEditComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
+    { path: 'user/website/:wid/page/:pid/widget/:wgid/flickr', component: _components_widget_widget_edit_widget_image_flickr_image_search_flickr_image_search_component__WEBPACK_IMPORTED_MODULE_15__["FlickrImageSearchComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -227,7 +229,6 @@ var AppRoutingModule = /** @class */ (function () {
     return AppRoutingModule;
 }());
 
-//export const AppRoutingModule = RouterModule.forRoot(routes)
 
 
 /***/ }),
@@ -332,6 +333,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_widget_widget_edit_widget_html_widget_html_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/widget/widget-edit/widget-html/widget-html.component */ "./src/app/components/widget/widget-edit/widget-html/widget-html.component.ts");
 /* harmony import */ var _components_widget_widget_edit_widget_text_widget_text_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/widget/widget-edit/widget-text/widget-text.component */ "./src/app/components/widget/widget-edit/widget-text/widget-text.component.ts");
 /* harmony import */ var ngx_quill_editor__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ngx-quill-editor */ "./node_modules/ngx-quill-editor/index.js");
+/* harmony import */ var _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./services/auth-guard.service */ "./src/app/services/auth-guard.service.ts");
+
 
 
 
@@ -403,7 +406,7 @@ var AppModule = /** @class */ (function () {
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_31__["HttpClientModule"],
                 ngx_quill_editor__WEBPACK_IMPORTED_MODULE_34__["QuillEditorModule"]
             ],
-            providers: [_services_user_service_client__WEBPACK_IMPORTED_MODULE_22__["UserService"], _services_page_service_client__WEBPACK_IMPORTED_MODULE_23__["PageService"], _services_website_service_client__WEBPACK_IMPORTED_MODULE_25__["WebsiteService"], _services_widget_service_client__WEBPACK_IMPORTED_MODULE_24__["WidgetService"], _services_flickr_service_client__WEBPACK_IMPORTED_MODULE_26__["FlickrService"], _services_shared_service__WEBPACK_IMPORTED_MODULE_27__["SharedService"]],
+            providers: [_services_user_service_client__WEBPACK_IMPORTED_MODULE_22__["UserService"], _services_page_service_client__WEBPACK_IMPORTED_MODULE_23__["PageService"], _services_website_service_client__WEBPACK_IMPORTED_MODULE_25__["WebsiteService"], _services_widget_service_client__WEBPACK_IMPORTED_MODULE_24__["WidgetService"], _services_flickr_service_client__WEBPACK_IMPORTED_MODULE_26__["FlickrService"], _services_shared_service__WEBPACK_IMPORTED_MODULE_27__["SharedService"], _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_35__["AuthGuard"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
@@ -432,7 +435,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Edit Page\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"update()\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container-fluid\">\n  <form #inputForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"page-name\"><h5>Name</h5></label>\n      <input type=\"text\" class=\"form-control\" id=\"page-name\" placeholder=\"Page Name\" name=\"name\" [(ngModel)]=\"page.name\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"page-title\"><h5>Title</h5></label>\n      <input type=\"text\" class=\"form-control\" id=\"page-title\" placeholder=\"Page Title\" name=\"title\" [(ngModel)]=\"page.title\" required>\n    </div>\n    <a class=\"btn btn-danger  btn-block\"\n       (click)=\"delete()\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page\">Delete</a>\n  </form>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/website/{{websiteId}}/page\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Edit Page\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"update()\" routerLink=\"/user/website/{{websiteId}}/page\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container-fluid\">\n  <form #inputForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"page-name\"><h5>Name</h5></label>\n      <input type=\"text\" class=\"form-control\" id=\"page-name\" placeholder=\"Page Name\" name=\"name\" [(ngModel)]=\"page.name\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"page-title\"><h5>Title</h5></label>\n      <input type=\"text\" class=\"form-control\" id=\"page-title\" placeholder=\"Page Title\" name=\"title\" [(ngModel)]=\"page.title\" required>\n    </div>\n    <a class=\"btn btn-danger  btn-block\"\n       (click)=\"delete()\" routerLink=\"/user/website/{{websiteId}}/page\">Delete</a>\n  </form>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -451,20 +454,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_page_service_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/page.service.client */ "./src/app/services/page.service.client.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_shared_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/shared.service */ "./src/app/services/shared.service.ts");
+
 
 
 
 
 
 var PageEditComponent = /** @class */ (function () {
-    function PageEditComponent(pageService, activatedRoute) {
+    function PageEditComponent(pageService, activatedRoute, sharedService) {
         this.pageService = pageService;
         this.activatedRoute = activatedRoute;
+        this.sharedService = sharedService;
     }
     PageEditComponent.prototype.ngOnInit = function () {
         var _this = this;
+        var user = this.sharedService.user;
         this.activatedRoute.params.subscribe(function (params) {
-            _this.userId = params['uid'];
+            _this.userId = user._id;
             _this.websiteId = params['wid'];
             _this.pageId = params['pid'];
             return _this.pageService.findPageById(_this.pageId).subscribe(function (page) {
@@ -500,7 +507,7 @@ var PageEditComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./page-edit.component.html */ "./src/app/components/page/page-edit/page-edit.component.html"),
             styles: [__webpack_require__(/*! ./page-edit.component.css */ "./src/app/components/page/page-edit/page-edit.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_page_service_client__WEBPACK_IMPORTED_MODULE_2__["PageService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_page_service_client__WEBPACK_IMPORTED_MODULE_2__["PageService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _services_shared_service__WEBPACK_IMPORTED_MODULE_5__["SharedService"]])
     ], PageEditComponent);
     return PageEditComponent;
 }());
@@ -527,7 +534,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand pull-left\" routerLink=\"/user/{{userId}}/website\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Pages\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/new\">\n      <span class=\"fa fa-plus\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container-fluid\">\n  <ul class=\"list-group cl-list-group-borderless\">\n    <li class=\"list-group-item cl-list-item-borderless\" *ngFor = \"let page of pages\">\n      <a routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{page._id}}\"><span class=\"fa fa-cog pull-right\"></span></a>\n      <a routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{page._id}}/widget\" class=\"list-name\">{{page.name}}</a>\n    </li>\n  </ul>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand pull-left\" routerLink=\"/user/website\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Pages\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/website/{{websiteId}}/page/new\">\n      <span class=\"fa fa-plus\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container-fluid\">\n  <ul class=\"list-group cl-list-group-borderless\">\n    <li class=\"list-group-item cl-list-item-borderless\" *ngFor = \"let page of pages\">\n      <a routerLink=\"/user/website/{{websiteId}}/page/{{page._id}}\"><span class=\"fa fa-cog pull-right\"></span></a>\n      <a routerLink=\"/user/website/{{websiteId}}/page/{{page._id}}/widget\" class=\"list-name\">{{page.name}}</a>\n    </li>\n  </ul>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -545,20 +552,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_page_service_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/page.service.client */ "./src/app/services/page.service.client.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_shared_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/shared.service */ "./src/app/services/shared.service.ts");
+
 
 
 
 
 var PageListComponent = /** @class */ (function () {
-    function PageListComponent(pageService, activatedRoute) {
+    function PageListComponent(pageService, activatedRoute, sharedService) {
         this.pageService = pageService;
         this.activatedRoute = activatedRoute;
+        this.sharedService = sharedService;
         this.pages = [];
     }
     PageListComponent.prototype.ngOnInit = function () {
         var _this = this;
+        var user = this.sharedService.user;
         this.activatedRoute.params.subscribe(function (params) {
-            _this.userId = params['uid'];
+            _this.userId = user._id;
             _this.websiteId = params['wid'];
             return _this.pageService.findPageByWebsiteId(_this.websiteId).subscribe(function (pages) {
                 _this.pages = pages;
@@ -571,7 +582,7 @@ var PageListComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./page-list.component.html */ "./src/app/components/page/page-list/page-list.component.html"),
             styles: [__webpack_require__(/*! ./page-list.component.css */ "./src/app/components/page/page-list/page-list.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_page_service_client__WEBPACK_IMPORTED_MODULE_2__["PageService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_page_service_client__WEBPACK_IMPORTED_MODULE_2__["PageService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _services_shared_service__WEBPACK_IMPORTED_MODULE_4__["SharedService"]])
     ], PageListComponent);
     return PageListComponent;
 }());
@@ -598,7 +609,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light bg-light\">\n\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand float-left\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      New Page\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"create()\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container-fluid\">\n  <form #inputForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"page-name\"><h5>Name</h5></label>\n      <input type=\"text\" class=\"form-control\" id=\"page-name\" name=\"name\" placeholder=\"Page Name\" ngModel required #name=\"ngModel\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"page-title\"><h5>Title</h5></label>\n      <input type=\"text\" class=\"form-control\" id=\"page-title\" name=\"title\" placeholder=\"Page Title\" ngModel required #title=\"ngModel\">\n    </div>\n  </form>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-light bg-light\">\n\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand float-left\" routerLink=\"/user/website/{{websiteId}}/page\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      New Page\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"create()\" routerLink=\"/user/website/{{websiteId}}/page\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container-fluid\">\n  <form #inputForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"page-name\"><h5>Name</h5></label>\n      <input type=\"text\" class=\"form-control\" id=\"page-name\" name=\"name\" placeholder=\"Page Name\" ngModel required #name=\"ngModel\">\n    </div>\n    <span class=\"alert alert-danger\" *ngIf=\"!name.valid && name.touched\">\n          Please enter name!\n        </span>\n    <div class=\"form-group\">\n      <label for=\"page-title\"><h5>Title</h5></label>\n      <input type=\"text\" class=\"form-control\" id=\"page-title\" name=\"title\" placeholder=\"Page Title\" ngModel required #title=\"ngModel\">\n    </div>\n  </form>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -617,20 +628,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_page_service_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/page.service.client */ "./src/app/services/page.service.client.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_shared_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/shared.service */ "./src/app/services/shared.service.ts");
+
 
 
 
 
 
 var PageNewComponent = /** @class */ (function () {
-    function PageNewComponent(pageService, activatedRoute) {
+    function PageNewComponent(pageService, activatedRoute, sharedService) {
         this.pageService = pageService;
         this.activatedRoute = activatedRoute;
+        this.sharedService = sharedService;
     }
     PageNewComponent.prototype.ngOnInit = function () {
         var _this = this;
+        var user = this.sharedService.user;
         this.activatedRoute.params.subscribe(function (params) {
-            _this.userId = params['uid'];
+            _this.userId = user._id;
             _this.websiteId = params['wid'];
         });
     };
@@ -654,7 +669,7 @@ var PageNewComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./page-new.component.html */ "./src/app/components/page/page-new/page-new.component.html"),
             styles: [__webpack_require__(/*! ./page-new.component.css */ "./src/app/components/page/page-new/page-new.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_page_service_client__WEBPACK_IMPORTED_MODULE_2__["PageService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_page_service_client__WEBPACK_IMPORTED_MODULE_2__["PageService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _services_shared_service__WEBPACK_IMPORTED_MODULE_5__["SharedService"]])
     ], PageNewComponent);
     return PageNewComponent;
 }());
@@ -681,7 +696,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <div *ngIf=\"errorFlag\" class=\"alert alert-danger\">\n    {{errorMsg}}\n  </div>\n\n  <h1>Login</h1>\n  <form (ngSubmit)=\"login()\" #inputForm=\"ngForm\">\n\n    <div class=\"form-group\">\n      <input type=\"text\" name=\"username\" placeholder=\"username\" class=\"form-control\" ngModel required #username=\"ngModel\">\n    </div>\n    <span class=\"help-block\" *ngIf=\"!username.valid && username.touched\">\n      Please enter username!\n    </span>\n\n    <div class=\"form-group\">\n      <input type=\"password\" name=\"password\" placeholder=\"password\" class=\"form-control\" ngModel required #password=\"ngModel\">\n    </div>\n    <span class=\"help-block\" *ngIf=\"!password.valid && password.touched\">\n      Please enter password!\n    </span>\n\n    <div class=\"form-group\">\n      <button [disabled]=\"!inputForm.valid\" class=\"btn btn-primary btn-block\" type=\"submit\">Login</button>\n    </div>\n\n    <div class=\"form-group\">\n      <a routerLink=\"/register\" class=\"btn btn-success btn-block\">Register</a>\n    </div>\n  </form>\n</div>\n"
+module.exports = "<div class=\"container-fluid\">\n  <div *ngIf=\"errorFlag\" class=\"alert alert-danger\">\n    {{errorMsg}}\n  </div>\n\n  <h1>Login</h1>\n  <form (ngSubmit)=\"login()\" #inputForm=\"ngForm\">\n\n    <div class=\"form-group\">\n      <input type=\"text\" name=\"username\" placeholder=\"username\" class=\"form-control\" ngModel required #username=\"ngModel\">\n    </div>\n    <span class=\"alert alert-danger\" *ngIf=\"!username.valid && username.touched\">\n      Please enter username!\n    </span>\n\n    <div class=\"form-group\">\n      <input type=\"password\" name=\"password\" placeholder=\"password\" class=\"form-control\" ngModel required #password=\"ngModel\">\n    </div>\n    <span class=\"alert alert-danger\" *ngIf=\"!password.valid && password.touched\">\n      Please enter password!\n    </span>\n\n    <div class=\"form-group\">\n      <button [disabled]=\"!inputForm.valid\" class=\"btn btn-primary btn-block\" type=\"submit\">Login</button>\n    </div>\n\n    <div class=\"form-group\">\n      <a routerLink=\"/register\" class=\"btn btn-success btn-block\">Register</a>\n    </div>\n  </form>\n\n  <a href=\"/facebook/login\" class=\"btn btn-primary btn-block\"> <span class=\"fa fa-facebook\"></span> Facebook </a>\n</div>\n"
 
 /***/ }),
 
@@ -700,15 +715,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _services_user_service_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/user.service.client */ "./src/app/services/user.service.client.ts");
+/* harmony import */ var _services_shared_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/shared.service */ "./src/app/services/shared.service.ts");
+
 
 
 
 
 
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(userService, router) {
+    function LoginComponent(userService, router, sharedService) {
         this.userService = userService;
         this.router = router;
+        this.sharedService = sharedService;
         this.errorMsg = 'Invalid username or password !';
     }
     LoginComponent.prototype.ngOnInit = function () {
@@ -717,13 +735,13 @@ var LoginComponent = /** @class */ (function () {
         var _this = this;
         var username = this.loginForm.value.username;
         var password = this.loginForm.value.password;
-        return this.userService.findUserByCredentials(username, password).subscribe(function (user) {
-            if (user) {
-                _this.router.navigate(['/user', user._id]);
-            }
-            else {
-                _this.errorFlag = true;
-            }
+        return this.userService.login(username, password)
+            .subscribe(function (data) {
+            _this.sharedService.user = data;
+            _this.errorFlag = false;
+            _this.router.navigate(['/profile']);
+        }, function (error) {
+            _this.errorFlag = true;
         });
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -736,7 +754,7 @@ var LoginComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./login.component.html */ "./src/app/components/user/login/login.component.html"),
             styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/components/user/login/login.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_user_service_client__WEBPACK_IMPORTED_MODULE_4__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_user_service_client__WEBPACK_IMPORTED_MODULE_4__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _services_shared_service__WEBPACK_IMPORTED_MODULE_5__["SharedService"]])
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -763,7 +781,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-dark cl-blue-navbar\">\n  <a class=\"navbar-brand\" [routerLink]=\"\">\n    Profile\n  </a>\n  <a class=\"navbar-brand pull-right\" (click)=\"updateUser()\" routerLink=\"/user/{{user._id}}\">\n    <span class=\"fa fa-check\"></span>\n  </a>\n</nav>\n<div class=\"container main\">\n  <form #inputForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"username\">\n        <h5>Username</h5>\n      </label>\n      <input type=\"text\" id='username' name='username' class=\"form-control\" [(ngModel)]=\"user.username\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"email\">\n        <h5>Email address</h5>\n      </label>\n      <input type=\"email\" id=\"email\" name='email' class=\"form-control\" [(ngModel)]=\"user.email\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"first-name\">\n        <h5>First Name</h5>\n      </label>\n      <input type=\"text\" id=\"first-name\" name='firstName' class=\"form-control\" [(ngModel)]=\"user.firstName\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"last-name\">\n        <h5>Last Name</h5>\n      </label>\n      <input type=\"text\" id=\"last-name\" name='lastName' class=\"form-control\" [(ngModel)]=\"user.lastName\" required>\n    </div>\n\n    <div class=\"form-group\">\n      <a class=\"btn btn-block btn-primary\"\n         routerLink=\"/user/{{user._id}}/website\">\n        Websites\n      </a>\n    </div>\n\n    <div class=\"form-group\">\n      <button class=\"btn btn-danger btn-block\" routerLink=\"/login\">Logout</button>\n    </div>\n\n  </form>\n</div>\n<nav class=\"navbar navbar-dark fixed-bottom cl-blue-navbar\"></nav>\n"
+module.exports = "<nav class=\"navbar navbar-dark cl-blue-navbar\">\n  <a class=\"navbar-brand\" [routerLink]=\"\">\n    Profile\n  </a>\n  <a class=\"navbar-brand pull-right\" (click)=\"updateUser()\" routerLink=\"/profile\">\n    <span class=\"fa fa-check\"></span>\n  </a>\n</nav>\n<div class=\"container main\">\n  <form #inputForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"username\">\n        <h5>Username</h5>\n      </label>\n      <input type=\"text\" id='username' name='username' class=\"form-control\" [(ngModel)]=\"user.username\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"email\">\n        <h5>Email address</h5>\n      </label>\n      <input type=\"email\" id=\"email\" name='email' class=\"form-control\" [(ngModel)]=\"user.email\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"first-name\">\n        <h5>First Name</h5>\n      </label>\n      <input type=\"text\" id=\"first-name\" name='firstName' class=\"form-control\" [(ngModel)]=\"user.firstName\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"last-name\">\n        <h5>Last Name</h5>\n      </label>\n      <input type=\"text\" id=\"last-name\" name='lastName' class=\"form-control\" [(ngModel)]=\"user.lastName\" required>\n    </div>\n\n    <div class=\"form-group\">\n      <a class=\"btn btn-block btn-primary\"\n         routerLink=\"/user/website\">\n        Websites\n      </a>\n    </div>\n\n    <div class=\"form-group\">\n      <button routerLink=\"/login\" (click)=\"deleteUser()\" class=\"btn btn-danger btn-block\">Delete User</button>\n    </div>\n\n    <div class=\"form-group\">\n      <button class=\"btn btn-danger btn-block\" (click)=\"logout()\">Logout</button>\n    </div>\n\n  </form>\n</div>\n<nav class=\"navbar navbar-dark fixed-bottom cl-blue-navbar\"></nav>\n"
 
 /***/ }),
 
@@ -782,15 +800,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_user_service_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/user.service.client */ "./src/app/services/user.service.client.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_shared_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/shared.service */ "./src/app/services/shared.service.ts");
+
+
 
 
 
 
 
 var ProfileComponent = /** @class */ (function () {
-    function ProfileComponent(userService, route) {
+    function ProfileComponent(userService, route, router, sharedService) {
         this.userService = userService;
         this.route = route;
+        this.router = router;
+        this.sharedService = sharedService;
     }
     ProfileComponent.prototype.updateUser = function () {
         var _this = this;
@@ -808,11 +831,20 @@ var ProfileComponent = /** @class */ (function () {
         });
     };
     ProfileComponent.prototype.ngOnInit = function () {
+        this.user = this.sharedService.user;
+    };
+    ProfileComponent.prototype.deleteUser = function () {
         var _this = this;
-        this.route.params.subscribe(function (params) {
-            return _this.userService.findUserById(params['uid']).subscribe(function (user) {
-                _this.user = user;
-            });
+        this.userService.deleteUser(this.user._id).subscribe(function () {
+            _this.logout();
+        });
+    };
+    ProfileComponent.prototype.logout = function () {
+        var _this = this;
+        this.userService.logout()
+            .subscribe(function (data) {
+            _this.sharedService.user = '';
+            _this.router.navigate(['/login']);
         });
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -825,7 +857,7 @@ var ProfileComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./profile.component.html */ "./src/app/components/user/profile/profile.component.html"),
             styles: [__webpack_require__(/*! ./profile.component.css */ "./src/app/components/user/profile/profile.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_user_service_client__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_user_service_client__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _services_shared_service__WEBPACK_IMPORTED_MODULE_5__["SharedService"]])
     ], ProfileComponent);
     return ProfileComponent;
 }());
@@ -852,7 +884,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <div *ngIf=\"errorFlag\" class=\"alert alert-danger\">\n    {{errorMsg}}\n  </div>\n\n  <h1>Register</h1>\n  <form #inputForm=\"ngForm\">\n\n    <div class=\"form-group\">\n      <input type=\"text\" name=\"username\" placeholder=\"username\" class=\"form-control\" ngModel required #username=\"ngModel\">\n    </div>\n    <span class=\"help-block\" *ngIf=\"!username.valid && username.touched\">\n      Please enter username!\n    </span>\n\n    <div class=\"form-group\">\n      <input type=\"password\" name=\"password\" placeholder=\"password\" class=\"form-control\" ngModel required #password=\"ngModel\">\n    </div>\n    <span class=\"help-block\" *ngIf=\"!password.valid && password.touched\">\n      Please enter password!\n    </span>\n\n    <div class=\"form-group\">\n      <input type=\"password\" name=\"v_password\" placeholder=\"verify password\" class=\"form-control\" ngModel required #v_password=\"ngModel\">\n    </div>\n    <span class=\"help-block\" *ngIf=\"!v_password.valid && v_password.touched\">\n      Please enter verify password!\n    </span>\n\n    <div class=\"form-group\">\n      <input type=\"text\" name=\"firstName\" placeholder=\"firstName\" class=\"form-control\" ngModel required #firstName=\"ngModel\">\n    </div>\n    <span class=\"help-block\" *ngIf=\"!firstName.valid && firstName.touched\">\n      Please enter firstName!\n    </span>\n\n    <div class=\"form-group\">\n      <input type=\"text\" name=\"lastName\" placeholder=\"lastName\" class=\"form-control\" ngModel required #lastName=\"ngModel\">\n    </div>\n    <span class=\"help-block\" *ngIf=\"!lastName.valid && lastName.touched\">\n      Please enter lastName!\n    </span>\n\n    <div class=\"form-group\">\n      <button [disabled]=\"!inputForm.valid\" class=\"btn btn-primary btn-block\" type=\"submit\" routerLink=\"/login\" (click)=\"register()\">Register</button>\n    </div>\n\n    <div class=\"form-group\">\n      <a routerLink=\"/login\" class=\"btn btn-danger btn-block\">Cancel</a>\n    </div>\n  </form>\n</div>\n"
+module.exports = "<div class=\"container-fluid\">\n  <div *ngIf=\"errorFlag\" class=\"alert alert-danger\">\n    {{errorMsg}}\n  </div>\n\n  <h1>Register</h1>\n  <form #inputForm=\"ngForm\">\n\n    <div class=\"form-group\">\n      <input type=\"text\" name=\"username\" placeholder=\"username\" class=\"form-control\" ngModel required #username=\"ngModel\">\n    </div>\n    <span class=\"alert alert-danger\" *ngIf=\"!username.valid && username.touched\">\n      Please enter username!\n    </span>\n\n    <div class=\"form-group\">\n      <input type=\"password\" name=\"password\" placeholder=\"password\" class=\"form-control\" ngModel required #password=\"ngModel\">\n    </div>\n    <span class=\"alert alert-danger\" *ngIf=\"!password.valid && password.touched\">\n      Please enter password!\n    </span>\n\n    <div class=\"form-group\">\n      <input type=\"password\" name=\"v_password\" placeholder=\"verify password\" class=\"form-control\" ngModel required #v_password=\"ngModel\">\n    </div>\n    <span class=\"alert alert-danger\" *ngIf=\"!v_password.valid && v_password.touched\">\n      Please enter verify password!\n    </span>\n\n    <div class=\"form-group\">\n      <button [disabled]=\"!inputForm.valid\" class=\"btn btn-primary btn-block\" type=\"button\" (click)=\"register()\">Register</button>\n    </div>\n\n    <div class=\"form-group\">\n      <a routerLink=\"/login\" class=\"btn btn-danger btn-block\">Cancel</a>\n    </div>\n  </form>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -870,27 +902,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_user_service_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/user.service.client */ "./src/app/services/user.service.client.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
 
 var RegisterComponent = /** @class */ (function () {
-    function RegisterComponent(userService) {
+    function RegisterComponent(userService, router) {
         this.userService = userService;
+        this.router = router;
         this.errorMsg = 'Password mis-matching!';
     }
     RegisterComponent.prototype.register = function () {
+        var _this = this;
         var password = this.registerForm.value.password;
         var v_password = this.registerForm.value.v_password;
+        var username = this.registerForm.value.username;
         if (v_password === password) {
             this.errorFlag = false;
-            var newUser = {
-                username: this.registerForm.value.username,
-                password: this.registerForm.value.password,
-                firstName: this.registerForm.value.firstName,
-                lastName: this.registerForm.value.lastName
-            };
-            this.userService.createUser(newUser).subscribe(function (user) { return console.log('register!'); });
+            this.userService.register(username, password).subscribe(function (user) {
+                _this.user = user;
+                _this.router.navigate(['/profile']);
+            }, function (err) {
+                _this.errorFlag = true;
+                _this.errorMsg = 'Username unavailable!';
+            });
         }
         else {
             this.errorFlag = true;
@@ -908,7 +945,7 @@ var RegisterComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./register.component.html */ "./src/app/components/user/register/register.component.html"),
             styles: [__webpack_require__(/*! ./register.component.css */ "./src/app/components/user/register/register.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_user_service_client__WEBPACK_IMPORTED_MODULE_2__["UserService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_user_service_client__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
     ], RegisterComponent);
     return RegisterComponent;
 }());
@@ -935,7 +972,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-dark cl-blue-navbar\">\n  <div class=\"row container-fluid\">\n    <div class=\"col-sm-4 d-none d-sm-block\">\n      <a class=\"navbar-brand float-left\" routerLink=\"/user/{{userId}}/website\">\n        <span class=\"fa fa-chevron-left rotate\"></span>\n      </a>\n      <a class=\"navbar-brand\" [routerLink]=\"\">\n        Websites\n      </a>\n      <a routerLink=\"/user/{{userId}}/website/new\" class=\"navbar-brand pull-right\">\n        <span class=\"fa fa-plus\"></span>\n      </a>\n    </div>\n    <div class=\"col-sm-8 text-left\">\n      <a class=\"navbar-brand \" href=\"#\">\n        Edit Websites\n      </a>\n      <a (click)=\"update()\" routerLink=\"/user/{{userId}}/website\" class=\"navbar-brand pull-right\">\n        <span class=\"fa fa-check\"></span>\n      </a>\n    </div>\n  </div>\n</nav>\n\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-sm-4 d-none d-sm-block\">\n      <ul class=\"list-group cl-list-group-borderless\">\n        <li class=\"list-group-item cl-list-item-borderless\"  *ngFor = \"let website of websites\">\n          <a routerLink=\"/user/{{userId}}/website/{{website._id}}\"><span class=\"fa fa-cog pull-right\"></span></a>\n          <a routerLink=\"/user/{{userId}}/website/{{website._id}}/page\" class=\"list-name\">{{website.name}}</a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"col-sm-8\">\n      <form #inputForm=\"ngForm\">\n        <div class=\"form-group\">\n          <label for=\"website-name\"><h5>Website Name</h5></label>\n          <input type=\"text\" class=\"form-control\" id=\"website-name\" placeholder=\"Name\" name=\"name\" [(ngModel)]=\"website.name\" required>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"website-description\"><h5>Website Description</h5></label>\n          <textarea id=\"website-description\" class=\"form-control\" rows=\"5\" placeholder=\"Description\" name=\"description\" [(ngModel)]=\"website.description\"></textarea>\n        </div>\n        <a class=\"btn btn-danger  btn-block\"\n           (click)=\"delete()\" routerLink=\"/user/{{userId}}/website\">Delete</a>\n      </form>\n    </div>\n  </div>\n</div>\n\n<nav class=\"navbar navbar-dark fixed-bottom cl-blue-navbar\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-dark cl-blue-navbar\">\n  <div class=\"row container-fluid\">\n    <div class=\"col-sm-4 d-none d-sm-block\">\n      <a class=\"navbar-brand float-left\" routerLink=\"/user/website\">\n        <span class=\"fa fa-chevron-left rotate\"></span>\n      </a>\n      <a class=\"navbar-brand\" [routerLink]=\"\">\n        Websites\n      </a>\n      <a routerLink=\"/user/website/new\" class=\"navbar-brand pull-right\">\n        <span class=\"fa fa-plus\"></span>\n      </a>\n    </div>\n    <div class=\"col-sm-8 text-left\">\n      <a class=\"navbar-brand \" href=\"#\">\n        Edit Websites\n      </a>\n      <a (click)=\"update()\" routerLink=\"/user/website\" class=\"navbar-brand pull-right\">\n        <span class=\"fa fa-check\"></span>\n      </a>\n    </div>\n  </div>\n</nav>\n\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-sm-4 d-none d-sm-block\">\n      <ul class=\"list-group cl-list-group-borderless\">\n        <li class=\"list-group-item cl-list-item-borderless\"  *ngFor = \"let website of websites\">\n          <a routerLink=\"/user/website/{{website._id}}\"><span class=\"fa fa-cog pull-right\"></span></a>\n          <a routerLink=\"/user/website/{{website._id}}/page\" class=\"list-name\">{{website.name}}</a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"col-sm-8\">\n      <form #inputForm=\"ngForm\">\n        <div class=\"form-group\">\n          <label for=\"website-name\"><h5>Website Name</h5></label>\n          <input type=\"text\" class=\"form-control\" id=\"website-name\" placeholder=\"Name\" name=\"name\" [(ngModel)]=\"website.name\" required >\n        </div>\n        <div class=\"form-group\">\n          <label for=\"website-description\"><h5>Website Description</h5></label>\n          <textarea id=\"website-description\" class=\"form-control\" rows=\"5\" placeholder=\"Description\" name=\"description\" [(ngModel)]=\"website.description\"></textarea>\n        </div>\n        <a class=\"btn btn-danger  btn-block\"\n           (click)=\"delete()\" routerLink=\"/user/website\">Delete</a>\n      </form>\n    </div>\n  </div>\n</div>\n\n<nav class=\"navbar navbar-dark fixed-bottom cl-blue-navbar\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -954,6 +991,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_website_service_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/website.service.client */ "./src/app/services/website.service.client.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_shared_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/shared.service */ "./src/app/services/shared.service.ts");
+
 
 
 
@@ -961,16 +1000,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var WebsiteEditComponent = /** @class */ (function () {
-    function WebsiteEditComponent(websiteService, activatedRoute, router) {
+    function WebsiteEditComponent(websiteService, activatedRoute, router, sharedService) {
         this.websiteService = websiteService;
         this.activatedRoute = activatedRoute;
         this.router = router;
+        this.sharedService = sharedService;
         this.websites = [];
     }
     WebsiteEditComponent.prototype.ngOnInit = function () {
         var _this = this;
+        var user = this.sharedService.user;
         this.activatedRoute.params.subscribe(function (params) {
-            _this.userId = params['uid'];
+            _this.userId = user._id;
             _this.website_id = params['wid'];
             return _this.websiteService.findWebsitesById(_this.userId, _this.website_id).subscribe(function (website) {
                 _this.website = website;
@@ -1008,7 +1049,7 @@ var WebsiteEditComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./website-edit.component.html */ "./src/app/components/website/website-edit/website-edit.component.html"),
             styles: [__webpack_require__(/*! ./website-edit.component.css */ "./src/app/components/website/website-edit/website-edit.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_website_service_client__WEBPACK_IMPORTED_MODULE_2__["WebsiteService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_website_service_client__WEBPACK_IMPORTED_MODULE_2__["WebsiteService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _services_shared_service__WEBPACK_IMPORTED_MODULE_5__["SharedService"]])
     ], WebsiteEditComponent);
     return WebsiteEditComponent;
 }());
@@ -1035,7 +1076,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-dark cl-blue-navbar\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand pull-left\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-brand\" [routerLink]=\"\">\n      Websites\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"new\">\n      <span class=\"fa fa-plus\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container-fluid\">\n  <ul class=\"list-group cl-list-group-borderless\">\n    <li class=\"list-group-item cl-list-item-borderless\"  *ngFor = \"let website of websites\">\n      <a routerLink=\"{{website._id}}\"><span class=\"fa fa-cog pull-right\"></span></a>\n      <a routerLink=\"{{website._id}}/page\" class=\"list-name\">{{website.name}}</a>\n    </li>\n  </ul>\n</div>\n\n<nav class=\"navbar navbar-dark fixed-bottom cl-blue-navbar\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-dark cl-blue-navbar\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand pull-left\" routerLink=\"/profile\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-brand\" [routerLink]=\"\">\n      Websites\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"new\">\n      <span class=\"fa fa-plus\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container-fluid\">\n  <ul class=\"list-group cl-list-group-borderless\">\n    <li class=\"list-group-item cl-list-item-borderless\"  *ngFor = \"let website of websites\">\n      <a routerLink=\"/user/website/{{website._id}}\"><span class=\"fa fa-cog pull-right\"></span></a>\n      <a routerLink=\"/user/website/{{website._id}}/page\" class=\"list-name\">{{website.name}}</a>\n    </li>\n  </ul>\n</div>\n\n<nav class=\"navbar navbar-dark fixed-bottom cl-blue-navbar\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -1053,21 +1094,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_website_service_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/website.service.client */ "./src/app/services/website.service.client.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_shared_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/shared.service */ "./src/app/services/shared.service.ts");
+
 
 
 
 
 var WebsiteListComponent = /** @class */ (function () {
-    function WebsiteListComponent(websiteService, activatedRoute) {
+    function WebsiteListComponent(websiteService, activatedRoute, sharedService) {
         this.websiteService = websiteService;
         this.activatedRoute = activatedRoute;
+        this.sharedService = sharedService;
         this.websites = [];
     }
     WebsiteListComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.user = this.sharedService.user;
         this.activatedRoute.params.subscribe(function (params) {
-            _this.userId = params['uid'];
-            return _this.websiteService.findWebsitesByUser(_this.userId).subscribe(function (websites) {
+            return _this.websiteService.findWebsitesByUser(_this.user._id).subscribe(function (websites) {
                 _this.websites = websites;
             });
         });
@@ -1078,7 +1122,7 @@ var WebsiteListComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./website-list.component.html */ "./src/app/components/website/website-list/website-list.component.html"),
             styles: [__webpack_require__(/*! ./website-list.component.css */ "./src/app/components/website/website-list/website-list.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_website_service_client__WEBPACK_IMPORTED_MODULE_2__["WebsiteService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_website_service_client__WEBPACK_IMPORTED_MODULE_2__["WebsiteService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _services_shared_service__WEBPACK_IMPORTED_MODULE_4__["SharedService"]])
     ], WebsiteListComponent);
     return WebsiteListComponent;
 }());
@@ -1105,7 +1149,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-dark cl-blue-navbar\">\n  <div class=\"row container-fluid\">\n    <div class=\"col-sm-4 d-none d-sm-block\">\n      <a class=\"navbar-brand float-left\" routerLink=\"/user/{{userId}}/website\">\n        <span class=\"fa fa-chevron-left rotate\"></span>\n      </a>\n      <a class=\"navbar-brand\" [routerLink]=\"\">\n        Websites\n      </a>\n      <a routerLink=\"/user/{{userId}}/website/new\" class=\"navbar-brand pull-right\">\n        <span class=\"fa fa-plus\"></span>\n      </a>\n    </div>\n    <div class=\"col-sm-8 text-left\">\n      <a class=\"navbar-brand \" href=\"#\">\n        New Websites\n      </a>\n      <a class=\"navbar-brand float-right\" routerLink=\"/user/{{userId}}/website\" (click)=\"create()\">\n        <span class=\"fa fa-check\"></span>\n      </a>\n    </div>\n  </div>\n</nav>\n\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-sm-4 d-none d-sm-block\">\n      <ul class=\"list-group cl-list-group-borderless\">\n        <li class=\"list-group-item cl-list-item-borderless\"  *ngFor = \"let website of websites\">\n          <a routerLink=\"/user/{{userId}}/website/{{website._id}}\"><span class=\"fa fa-cog pull-right\"></span></a>\n          <a routerLink=\"/user/{{userId}}/website/{{website._id}}/page\" class=\"list-name\">{{website.name}}</a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"col-sm-8\">\n      <form #inputForm=\"ngForm\">\n        <div class=\"form-group\">\n          <label for=\"website-name\"><h5>Name</h5></label>\n          <input type=\"text\" id=\"website-name\" name=\"name\" placeholder=\"Name\" class=\"form-control\" ngModel required #name=\"ngModel\">\n        </div>\n        <div class=\"form-group\">\n          <label for=\"website-description\"><h5>Description</h5></label>\n          <input type=\"text\" id=\"website-description\" name=\"description\" placeholder=\"Description\" class=\"form-control\" ngModel required #description=\"ngModel\">\n        </div>\n      </form>\n    </div>\n  </div>\n</div>\n\n<nav class=\"navbar navbar-dark fixed-bottom cl-blue-navbar\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-dark cl-blue-navbar\">\n  <div class=\"row container-fluid\">\n    <div class=\"col-sm-4 d-none d-sm-block\">\n      <a class=\"navbar-brand float-left\" routerLink=\"/user/website\">\n        <span class=\"fa fa-chevron-left rotate\"></span>\n      </a>\n      <a class=\"navbar-brand\" [routerLink]=\"\">\n        Websites\n      </a>\n      <a routerLink=\"/user/website/new\" class=\"navbar-brand pull-right\">\n        <span class=\"fa fa-plus\"></span>\n      </a>\n    </div>\n    <div class=\"col-sm-8 text-left\">\n      <a class=\"navbar-brand \" href=\"#\">\n        New Websites\n      </a>\n      <a class=\"navbar-brand float-right\" routerLink=\"/user/website\" (click)=\"create()\">\n        <span class=\"fa fa-check\"></span>\n      </a>\n    </div>\n  </div>\n</nav>\n\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-sm-4 d-none d-sm-block\">\n      <ul class=\"list-group cl-list-group-borderless\">\n        <li class=\"list-group-item cl-list-item-borderless\"  *ngFor = \"let website of websites\">\n          <a routerLink=\"/user/website/{{website._id}}\"><span class=\"fa fa-cog pull-right\"></span></a>\n          <a routerLink=\"/user/website/{{website._id}}/page\" class=\"list-name\">{{website.name}}</a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"col-sm-8\">\n      <form #inputForm=\"ngForm\">\n        <div class=\"form-group\">\n          <label for=\"website-name\"><h5>Name</h5></label>\n          <input type=\"text\" id=\"website-name\" name=\"name\" placeholder=\"Name\" class=\"form-control\" ngModel required #name=\"ngModel\">\n        </div>\n        <span class=\"alert alert-danger\" *ngIf=\"!name.valid && name.touched\">\n          Please enter name!\n        </span>\n        <div class=\"form-group\">\n          <label for=\"website-description\"><h5>Description</h5></label>\n          <input type=\"text\" id=\"website-description\" name=\"description\" placeholder=\"Description\" class=\"form-control\" ngModel required #description=\"ngModel\">\n        </div>\n      </form>\n    </div>\n  </div>\n</div>\n\n<nav class=\"navbar navbar-dark fixed-bottom cl-blue-navbar\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -1124,21 +1168,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_website_service_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/website.service.client */ "./src/app/services/website.service.client.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_shared_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/shared.service */ "./src/app/services/shared.service.ts");
+
 
 
 
 
 
 var WebsiteNewComponent = /** @class */ (function () {
-    function WebsiteNewComponent(websiteService, activatedRoute) {
+    function WebsiteNewComponent(websiteService, activatedRoute, sharedService) {
         this.websiteService = websiteService;
         this.activatedRoute = activatedRoute;
+        this.sharedService = sharedService;
         this.websites = [];
     }
     WebsiteNewComponent.prototype.ngOnInit = function () {
         var _this = this;
+        var user = this.sharedService.user;
         this.activatedRoute.params.subscribe(function (params) {
-            _this.userId = params['uid'];
+            _this.userId = user._id;
             return _this.websiteService.findWebsitesByUser(_this.userId).subscribe(function (websites) {
                 _this.websites = websites;
             });
@@ -1165,7 +1213,7 @@ var WebsiteNewComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./website-new.component.html */ "./src/app/components/website/website-new/website-new.component.html"),
             styles: [__webpack_require__(/*! ./website-new.component.css */ "./src/app/components/website/website-new/website-new.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_website_service_client__WEBPACK_IMPORTED_MODULE_2__["WebsiteService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_website_service_client__WEBPACK_IMPORTED_MODULE_2__["WebsiteService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _services_shared_service__WEBPACK_IMPORTED_MODULE_5__["SharedService"]])
     ], WebsiteNewComponent);
     return WebsiteNewComponent;
 }());
@@ -1192,7 +1240,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand pull-left\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Choose Widget\n    </a>\n  </form>\n</nav>\n\n<div class=\"container-fluid\">\n  <ul class=\"list-group cl-list-group-borderless\">\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a [routerLink]=\"\" (click)=\"create('HEADING')\" class=\"list-name\">Header</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a href=\"#\" class=\"list-name\">Label</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a [routerLink]=\"\" (click)=\"create('HTML')\" class=\"list-name\">HTML</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a [routerLink]=\"\" (click)=\"create('TEXT')\" class=\"list-name\">Text</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a href=\"#\" class=\"list-name\">Link</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a href=\"#\" class=\"list-name\">Button</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a [routerLink]=\"\" (click)=\"create('IMAGE')\" class=\"list-name\">Image</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a [routerLink]=\"\" (click)=\"create('YOUTUBE')\" class=\"list-name\">YouTube</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a href=\"#\" class=\"list-name\">Data Table</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a href=\"#\" class=\"list-name\">Repeater</a>\n    </li>\n  </ul>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" href=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand pull-left\" routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Choose Widget\n    </a>\n  </form>\n</nav>\n\n<div class=\"container-fluid\">\n  <ul class=\"list-group cl-list-group-borderless\">\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a [routerLink]=\"\" (click)=\"create('HEADING')\" class=\"list-name\">Header</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a href=\"#\" class=\"list-name\">Label</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a [routerLink]=\"\" (click)=\"create('HTML')\" class=\"list-name\">HTML</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a [routerLink]=\"\" (click)=\"create('TEXT')\" class=\"list-name\">Text</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a href=\"#\" class=\"list-name\">Link</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a href=\"#\" class=\"list-name\">Button</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a [routerLink]=\"\" (click)=\"create('IMAGE')\" class=\"list-name\">Image</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a [routerLink]=\"\" (click)=\"create('YOUTUBE')\" class=\"list-name\">YouTube</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a href=\"#\" class=\"list-name\">Data Table</a>\n    </li>\n    <li class=\"list-group-item cl-list-item-borderless\">\n      <a href=\"#\" class=\"list-name\">Repeater</a>\n    </li>\n  </ul>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" href=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -1210,20 +1258,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_widget_service_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/widget.service.client */ "./src/app/services/widget.service.client.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_shared_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/shared.service */ "./src/app/services/shared.service.ts");
+
 
 
 
 
 var WidgetChooserComponent = /** @class */ (function () {
-    function WidgetChooserComponent(widgetService, activatedRoute, router) {
+    function WidgetChooserComponent(widgetService, activatedRoute, router, sharedService) {
         this.widgetService = widgetService;
         this.activatedRoute = activatedRoute;
         this.router = router;
+        this.sharedService = sharedService;
     }
     WidgetChooserComponent.prototype.ngOnInit = function () {
         var _this = this;
+        var user = this.sharedService.user;
         this.activatedRoute.params.subscribe(function (params) {
-            _this.userId = params['uid'];
+            _this.userId = user._id;
             _this.websiteId = params['wid'];
             _this.pageId = params['pid'];
         });
@@ -1252,7 +1304,7 @@ var WidgetChooserComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./widget-chooser.component.html */ "./src/app/components/widget/widget-chooser/widget-chooser.component.html"),
             styles: [__webpack_require__(/*! ./widget-chooser.component.css */ "./src/app/components/widget/widget-chooser/widget-chooser.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_widget_service_client__WEBPACK_IMPORTED_MODULE_2__["WidgetService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_widget_service_client__WEBPACK_IMPORTED_MODULE_2__["WidgetService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _services_shared_service__WEBPACK_IMPORTED_MODULE_4__["SharedService"]])
     ], WidgetChooserComponent);
     return WidgetChooserComponent;
 }());
@@ -1297,19 +1349,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_widget_service_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/widget.service.client */ "./src/app/services/widget.service.client.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_shared_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/shared.service */ "./src/app/services/shared.service.ts");
+
 
 
 
 
 var WidgetEditComponent = /** @class */ (function () {
-    function WidgetEditComponent(widgetService, activatedRoute) {
+    function WidgetEditComponent(widgetService, activatedRoute, sharedService) {
         this.widgetService = widgetService;
         this.activatedRoute = activatedRoute;
+        this.sharedService = sharedService;
     }
     WidgetEditComponent.prototype.ngOnInit = function () {
         var _this = this;
+        var user = this.sharedService.user;
         this.activatedRoute.params.subscribe(function (params) {
-            _this.userId = params['uid'];
+            _this.userId = user._id;
             _this.websiteId = params['wid'];
             _this.pageId = params['pid'];
             _this.widgetId = params['wgid'];
@@ -1324,7 +1380,7 @@ var WidgetEditComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./widget-edit.component.html */ "./src/app/components/widget/widget-edit/widget-edit.component.html"),
             styles: [__webpack_require__(/*! ./widget-edit.component.css */ "./src/app/components/widget/widget-edit/widget-edit.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_widget_service_client__WEBPACK_IMPORTED_MODULE_2__["WidgetService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_widget_service_client__WEBPACK_IMPORTED_MODULE_2__["WidgetService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _services_shared_service__WEBPACK_IMPORTED_MODULE_4__["SharedService"]])
     ], WidgetEditComponent);
     return WidgetEditComponent;
 }());
@@ -1351,7 +1407,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Widgets Edit\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"update()\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  <form #inputForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"heading-text\">Text</label>\n      <input type=\"text\" class=\"form-control\" id=\"heading-text\" name=\"Text\" placeholder=\"Text\" [(ngModel)]=\"widget.text\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"heading-size\">Size</label>\n      <input type=\"text\" class=\"form-control\" id=\"heading-size\" name=\"Size\" placeholder=\"3\" [(ngModel)]=\"widget.size\" required>\n    </div>\n  </form>\n  <a class=\"btn btn-danger  btn-block\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget\" (click)=\"delete()\">Delete</a>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Widgets Edit\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"update()\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  <form #inputForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"heading-text\">Text</label>\n      <input type=\"text\" class=\"form-control\" id=\"heading-text\" name=\"Text\" placeholder=\"Text\" [(ngModel)]=\"widget.text\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"heading-size\">Size</label>\n      <input type=\"text\" class=\"form-control\" id=\"heading-size\" name=\"Size\" placeholder=\"3\" [(ngModel)]=\"widget.size\" required>\n    </div>\n  </form>\n  <a class=\"btn btn-danger  btn-block\" routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget\" (click)=\"delete()\">Delete</a>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -1446,7 +1502,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Widgets Edit\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"update()\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  <form>\n    <div class=\"form-group\">\n      <label for=\"heading-name\">Name</label>\n      <input [(ngModel)]=\"widget.name\" type=\"text\" class=\"form-control\" id=\"heading-name\" placeholder=\"Name\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"html-editor\">HTML</label>\n      <quill-editor [(ngModel)]=\"widget.text\" id=\"html-editor\" name=\"text\"></quill-editor>\n    </div>\n  </form>\n  <a class=\"btn btn-danger  btn-block\" (click)=\"delete()\">Delete</a>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Widgets Edit\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"update()\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  <form>\n    <div class=\"form-group\">\n      <label for=\"heading-name\">Name</label>\n      <input [(ngModel)]=\"widget.name\" type=\"text\" class=\"form-control\" id=\"heading-name\" placeholder=\"Name\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"html-editor\">HTML</label>\n      <quill-editor [(ngModel)]=\"widget.text\" id=\"html-editor\" name=\"text\"></quill-editor>\n    </div>\n  </form>\n  <a class=\"btn btn-danger  btn-block\" (click)=\"delete()\">Delete</a>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -1541,7 +1597,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widgetId}}\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Search Flickr\n    </a>\n  </form>\n</nav>\n\n<!--!!Material on the page!!-->\n<div class = \"container\">\n  <div class=\"input-group\">\n    <input [(ngModel)]=\"searchText\" type=\"text\" class=\"form-control\">\n    <span class=\"input-group-btn\">\n            <a (click)=\"searchPhotos()\" class=\"btn btn-default\" type=\"button\">\n                <span class=\"fa fa-search\"></span>\n            </a>\n        </span>\n  </div>\n\n  <div class=\"row\">\n    <!--<div *ngFor = \"let pic of photos['photo']\"-->\n    <div *ngFor = \"let pic of photos\"\n         class=\"col-xs-4\">\n      <img    (click)=\"selectPhoto(pic)\"\n              width=\"100%\"\n              [src] = \"['https://farm' + pic.farm + '.staticflickr.com/' + pic.server + '/' + pic.id + '_' + pic.secret + '_s.jpg']\"/>\n\n      <!--[src] = \"https://farm\" + photo.farm + \".staticflickr.com/\" + photo.server + \"/\" + photo.id + \"_\" + photo.secret + \"_\" + \"s.jpg\"/>-->\n      <p></p>\n    </div>\n  </div>\n\n</div>\n<!-- Footer -->\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget/{{widgetId}}\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Search Flickr\n    </a>\n  </form>\n</nav>\n\n<!--!!Material on the page!!-->\n<div class = \"container\">\n  <div class=\"input-group\">\n    <input [(ngModel)]=\"searchText\" type=\"text\" class=\"form-control\">\n    <span class=\"input-group-btn\">\n            <a (click)=\"searchPhotos()\" class=\"btn btn-default\" type=\"button\">\n                <span class=\"fa fa-search\"></span>\n            </a>\n        </span>\n  </div>\n\n  <div class=\"row\">\n    <!--<div *ngFor = \"let pic of photos['photo']\"-->\n    <div *ngFor = \"let pic of photos\"\n         class=\"col-xs-4\">\n      <img    (click)=\"selectPhoto(pic)\"\n              width=\"100%\"\n              [src] = \"['https://farm' + pic.farm + '.staticflickr.com/' + pic.server + '/' + pic.id + '_' + pic.secret + '_s.jpg']\"/>\n\n      <!--[src] = \"https://farm\" + photo.farm + \".staticflickr.com/\" + photo.server + \"/\" + photo.id + \"_\" + photo.secret + \"_\" + \"s.jpg\"/>-->\n      <p></p>\n    </div>\n  </div>\n\n</div>\n<!-- Footer -->\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -1577,9 +1633,10 @@ var FlickrImageSearchComponent = /** @class */ (function () {
     }
     FlickrImageSearchComponent.prototype.ngOnInit = function () {
         var _this = this;
+        var user = this.sharedService.user;
         this.activatedRoute.params
             .subscribe(function (params) {
-            _this.userId = params['uid'];
+            _this.userId = user._id;
             _this.websiteId = params['wid'];
             _this.pageId = params['pid'];
             _this.widgetId = params['wgid'];
@@ -1653,7 +1710,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Widgets Edit\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"update()\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  <form #inputForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"image-URL\">URL</label>\n      <input type=\"text\" class=\"form-control\" id=\"image-URL\" placeholder=\"Image URL\" name='Url' [(ngModel)]=\"widget.url\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"image-width\">Width</label>\n      <input type=\"text\" class=\"form-control\" id=\"image-width\" placeholder=\"100%\" name='Text' [(ngModel)]=\"widget.width\" required>\n    </div>\n  </form>\n  <form ngNoForm action=\"{{baseUrl}}api/upload\" method=\"post\" enctype=\"multipart/form-data\" >\n    <label for=\"myFile\">Upload Image</label>\n    <input  name=\"myFile\" id=\"myFile\"  type=\"file\" class=\"form-control form-group\"/>\n    <input  name=\"widgetId\" value=\"{{widget._id}}\" style=\"display: none\"/>\n    <input  name=\"pageId\" value=\"{{pageId}}\" style=\"display: none\"/>\n    <input  name=\"websiteId\" value=\"{{websiteId}}\" style=\"display: none\"/>\n    <input  name=\"userId\" value=\"{{userId}}\" style=\"display: none\"/>\n    <button type=\"submit\" class=\"btn btn-block btn-primary\">Upload Image</button>\n  </form>\n  <a class=\"btn btn-block btn-secondary\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}/flickr\" >Search</a>\n  <a class=\"btn btn-danger  btn-block\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget\" (click)=\"delete()\">Delete</a>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Widgets Edit\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"update()\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  <form #inputForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"image-URL\">URL</label>\n      <input type=\"text\" class=\"form-control\" id=\"image-URL\" placeholder=\"Image URL\" name='Url' [(ngModel)]=\"widget.url\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"image-width\">Width</label>\n      <input type=\"text\" class=\"form-control\" id=\"image-width\" placeholder=\"100%\" name='Text' [(ngModel)]=\"widget.width\" required>\n    </div>\n  </form>\n  <form ngNoForm action=\"{{baseUrl}}api/upload\" method=\"post\" enctype=\"multipart/form-data\" >\n    <label for=\"myFile\">Upload Image</label>\n    <input  name=\"myFile\" id=\"myFile\"  type=\"file\" class=\"form-control form-group\"/>\n    <input  name=\"widgetId\" value=\"{{widget._id}}\" style=\"display: none\"/>\n    <input  name=\"pageId\" value=\"{{pageId}}\" style=\"display: none\"/>\n    <input  name=\"websiteId\" value=\"{{websiteId}}\" style=\"display: none\"/>\n    <input  name=\"userId\" value=\"{{userId}}\" style=\"display: none\"/>\n    <button type=\"submit\" class=\"btn btn-block btn-primary\">Upload Image</button>\n  </form>\n  <a class=\"btn btn-block btn-secondary\" routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}/flickr\" >Search</a>\n  <a class=\"btn btn-danger  btn-block\" routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget\" (click)=\"delete()\">Delete</a>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -1751,7 +1808,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Widgets Edit\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"update()\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  <form>\n    <div class=\"form-group\">\n      <label for=\"heading-name\">Name</label>\n      <input [(ngModel)]=\"widget.name\" type=\"text\" class=\"form-control\" id=\"heading-name\" placeholder=\"Name\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"text-text\">Text</label>\n      <input [(ngModel)]=\"widget.text\" type=\"text\" class=\"form-control\" id=\"text-text\" placeholder=\"Text\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"text-rows\">Rows</label>\n      <input [(ngModel)]=\"widget.rows\" type=\"number\" class=\"form-control\" id=\"text-rows\" placeholder=\"Rows\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"text-placeholder\">Placeholder</label>\n      <input [(ngModel)]=\"widget.placeholder\" type=\"text\" class=\"form-control\" id=\"text-placeholder\" placeholder=\"Placeholder\" [ngModelOptions]=\"{standalone: true}\" required>\n    </div>\n    <div class=\"input-group\">\n      <input type=\"text\" readonly value=\"Formatted\" class=\"form-control\"/>\n      <span class=\"input-group-addon\">\n        <input [(ngModel)]=\"widget.formatted\" type=\"checkbox\" [ngModelOptions]=\"{standalone: true}\"/>\n      </span>\n    </div><br/>\n  </form>\n  <a class=\"btn btn-danger btn-block\" (click)=\"delete()\">Delete</a>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Widgets Edit\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"update()\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  <form>\n    <div class=\"form-group\">\n      <label for=\"heading-name\">Name</label>\n      <input [(ngModel)]=\"widget.name\" type=\"text\" class=\"form-control\" id=\"heading-name\" placeholder=\"Name\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"text-text\">Text</label>\n      <input [(ngModel)]=\"widget.text\" type=\"text\" class=\"form-control\" id=\"text-text\" placeholder=\"Text\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"text-rows\">Rows</label>\n      <input [(ngModel)]=\"widget.rows\" type=\"number\" class=\"form-control\" id=\"text-rows\" placeholder=\"Rows\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"text-placeholder\">Placeholder</label>\n      <input [(ngModel)]=\"widget.placeholder\" type=\"text\" class=\"form-control\" id=\"text-placeholder\" placeholder=\"Placeholder\" [ngModelOptions]=\"{standalone: true}\" required>\n    </div>\n    <div class=\"input-group\">\n      <input type=\"text\" readonly value=\"Formatted\" class=\"form-control\"/>\n      <span class=\"input-group-addon\">\n        <input [(ngModel)]=\"widget.formatted\" type=\"checkbox\" [ngModelOptions]=\"{standalone: true}\"/>\n      </span>\n    </div><br/>\n  </form>\n  <a class=\"btn btn-danger btn-block\" (click)=\"delete()\">Delete</a>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -1846,7 +1903,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Widgets Edit\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"update()\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  <form #inputForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"youtube-URL\">URL</label>\n      <input type=\"text\" class=\"form-control\" id=\"youtube-URL\" placeholder=\"Youtube URL\" name=\"Url\" [(ngModel)]=\"widget.url\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"youtube-width\">Width</label>\n      <input type=\"text\" class=\"form-control\" id=\"youtube-width\" placeholder=\"100%\" name=\"Width\" [(ngModel)]=\"widget.width\" required>\n    </div>\n  </form>\n  <a class=\"btn btn-danger btn-block\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget\" (click)=\"delete()\">Delete</a>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand\" routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Widgets Edit\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a (click)=\"update()\" class=\"navbar-brand pull-right\">\n      <span class=\"fa fa-check\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  <form #inputForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"youtube-URL\">URL</label>\n      <input type=\"text\" class=\"form-control\" id=\"youtube-URL\" placeholder=\"Youtube URL\" name=\"Url\" [(ngModel)]=\"widget.url\" required>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"youtube-width\">Width</label>\n      <input type=\"text\" class=\"form-control\" id=\"youtube-width\" placeholder=\"100%\" name=\"Width\" [(ngModel)]=\"widget.width\" required>\n    </div>\n  </form>\n  <a class=\"btn btn-danger btn-block\" routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget\" (click)=\"delete()\">Delete</a>\n</div>\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -1941,7 +1998,7 @@ module.exports = ".youtube-widget {\n  position: relative;\n  padding-bottom: 56
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand pull-left\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Widgets\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/new\">\n      <span class=\"fa fa-plus\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container cl-container-padding\" appSortable (newIndexes)=\"reorderWidgets($event)\">\n  <div *ngFor = \"let widget of widgets | orderBy\">\n    <div [ngSwitch]=\"widget.widgetType\">\n      <div *ngSwitchCase=\"'HEADING'\">\n        <div class=\"pull-right\">\n          <a routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}\">\n            <span class=\"fa fa-cog\"></span>\n          </a>\n        </div>\n        <div [ngSwitch]=\"widget.size\">\n          <h1 *ngSwitchCase=\"1\">{{widget.text}}</h1>\n          <h2 *ngSwitchCase=\"2\">{{widget.text}}</h2>\n          <h3 *ngSwitchCase=\"3\">{{widget.text}}</h3>\n          <h4 *ngSwitchCase=\"4\">{{widget.text}}</h4>\n          <h5 *ngSwitchCase=\"5\">{{widget.text}}</h5>\n          <h6 *ngSwitchCase=\"6\">{{widget.text}}</h6>\n        </div>\n      </div>\n\n      <div *ngSwitchCase=\"'IMAGE'\">\n        <div>\n          <a routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}\" class=\"pull-right\">\n            <span class=\"fa fa-cog\"></span>\n          </a>\n          <img class=\"img-responsive img-rounded cl-widget-images\"\n               src=\"{{widget.url}}\">\n        </div>\n      </div>\n\n      <div *ngSwitchCase=\"'YOUTUBE'\" class=\"youtube-widget\">\n        <div class=\"embed-responsive embed-responsive-16by9\">\n          <a routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}\" class=\"pull-right sticky-top\">\n            <span class=\"fa fa-cog youtube\" ></span>\n          </a>\n          <h1>{{widget.url}}</h1>\n          <iframe width=\"640\" height=\"360\" [src]=\"widget.url | safe\" frameborder=\"0\" allowfullscreen></iframe>\n        </div>\n      </div>\n\n      <div *ngSwitchCase=\"'HTML'\" [innerHTML]=\"widget.text\">\n        <div class=\"pull-right\">\n          <a routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}\">\n            <span class=\"fa fa-cog\"></span>\n          </a>\n        </div>\n      </div>\n\n      <div *ngSwitchCase=\"'TEXT'\">\n        <div class=\"pull-right\">\n          <a routerLink=\"/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}\">\n            <span class=\"fa fa-cog\"></span>\n          </a>\n        </div>\n        <div *ngIf=\"widget.formatted\">\n          <quill-editor [(ngModel)]=\"widget.text\" name=\"text\"></quill-editor>\n        </div>\n\n        <input *ngIf=\"!widget.formatted && (!widget.rows || widget.rows === 1)\"\n               [(ngModel)]=\"widget.text\" placeholder=\"{{widget.placeholder}}\" class=\"form-control\"/>\n\n        <textarea *ngIf=\"!widget.formatted && (widget.rows > 1)\"\n                  rows=\"{{widget.rows}}\" placeholder=\"{{widget.placeholder}}\"\n                  class=\"form-control\">{{widget.text}}</textarea>\n      </div>\n\n    </div>\n  </div>\n</div>\n\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a [routerLink]=\"\" class=\"navbar-brand\">\n      <span class=\"fa fa-play\"></span>\n    </a>\n    <a [routerLink]=\"\" class=\"navbar-brand\">\n      <span class=\"fa fa-eye\"></span>\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/{{userId}}\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a class=\"navbar-brand pull-left\" routerLink=\"/user/website/{{websiteId}}/page\">\n      <span class=\"fa fa-chevron-left rotate\"></span>\n    </a>\n    <a class=\"navbar-text cl-text-bold\" [routerLink]=\"\">\n      Widgets\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget/new\">\n      <span class=\"fa fa-plus\"></span>\n    </a>\n  </ul>\n</nav>\n\n<div class=\"container cl-container-padding\" appSortable (newIndexes)=\"reorderWidgets($event)\">\n  <div *ngFor = \"let widget of widgets | orderBy\">\n    <div [ngSwitch]=\"widget.widgetType\">\n      <div *ngSwitchCase=\"'HEADING'\">\n        <div class=\"pull-right\">\n          <a routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}\">\n            <span class=\"fa fa-cog\"></span>\n          </a>\n        </div>\n        <div [ngSwitch]=\"widget.size\">\n          <h1 *ngSwitchCase=\"1\">{{widget.text}}</h1>\n          <h2 *ngSwitchCase=\"2\">{{widget.text}}</h2>\n          <h3 *ngSwitchCase=\"3\">{{widget.text}}</h3>\n          <h4 *ngSwitchCase=\"4\">{{widget.text}}</h4>\n          <h5 *ngSwitchCase=\"5\">{{widget.text}}</h5>\n          <h6 *ngSwitchCase=\"6\">{{widget.text}}</h6>\n        </div>\n      </div>\n\n      <div *ngSwitchCase=\"'IMAGE'\">\n        <div>\n          <a routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}\" class=\"pull-right\">\n            <span class=\"fa fa-cog\"></span>\n          </a>\n          <img class=\"img-responsive img-rounded cl-widget-images\"\n               src=\"{{widget.url}}\">\n        </div>\n      </div>\n\n      <div *ngSwitchCase=\"'YOUTUBE'\" class=\"youtube-widget\">\n        <div class=\"embed-responsive embed-responsive-16by9\">\n          <a routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}\" class=\"pull-right sticky-top\">\n            <span class=\"fa fa-cog youtube\" ></span>\n          </a>\n          <h1>{{widget.url}}</h1>\n          <iframe width=\"640\" height=\"360\" [src]=\"widget.url | safe\" frameborder=\"0\" allowfullscreen></iframe>\n        </div>\n      </div>\n\n      <div *ngSwitchCase=\"'HTML'\" [innerHTML]=\"widget.text\">\n        <div class=\"pull-right\">\n          <a routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}\">\n            <span class=\"fa fa-cog\"></span>\n          </a>\n        </div>\n      </div>\n\n      <div *ngSwitchCase=\"'TEXT'\">\n        <div class=\"pull-right\">\n          <a routerLink=\"/user/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}\">\n            <span class=\"fa fa-cog\"></span>\n          </a>\n        </div>\n        <div *ngIf=\"widget.formatted\">\n          <quill-editor [(ngModel)]=\"widget.text\" name=\"text\"></quill-editor>\n        </div>\n\n        <input *ngIf=\"!widget.formatted && (!widget.rows || widget.rows === 1)\"\n               [(ngModel)]=\"widget.text\" placeholder=\"{{widget.placeholder}}\" class=\"form-control\"/>\n\n        <textarea *ngIf=\"!widget.formatted && (widget.rows > 1)\"\n                  rows=\"{{widget.rows}}\" placeholder=\"{{widget.placeholder}}\"\n                  class=\"form-control\">{{widget.text}}</textarea>\n      </div>\n\n    </div>\n  </div>\n</div>\n\n\n<nav class=\"navbar fixed-bottom navbar-light bg-light\">\n  <form class=\"form-inline\">\n    <a [routerLink]=\"\" class=\"navbar-brand\">\n      <span class=\"fa fa-play\"></span>\n    </a>\n    <a [routerLink]=\"\" class=\"navbar-brand\">\n      <span class=\"fa fa-eye\"></span>\n    </a>\n  </form>\n  <ul class=\"navbar-nav ml-auto\">\n    <a class=\"navbar-brand pull-right\" routerLink=\"/profile\">\n      <span class=\"fa fa-user\"></span>\n    </a>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -1960,22 +2017,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_widget_service_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/widget.service.client */ "./src/app/services/widget.service.client.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _services_shared_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/shared.service */ "./src/app/services/shared.service.ts");
+
 
 
 
 
 
 var WidgetListComponent = /** @class */ (function () {
-    function WidgetListComponent(widgetService, activatedRoute, sanitizer) {
+    function WidgetListComponent(widgetService, activatedRoute, sanitizer, sharedService) {
         this.widgetService = widgetService;
         this.activatedRoute = activatedRoute;
         this.sanitizer = sanitizer;
+        this.sharedService = sharedService;
         this.widgets = [];
     }
     WidgetListComponent.prototype.ngOnInit = function () {
         var _this = this;
+        var user = this.sharedService.user;
         this.activatedRoute.params.subscribe(function (params) {
-            _this.userId = params['uid'];
+            _this.userId = user._id;
             _this.websiteId = params['wid'];
             _this.pageId = params['pid'];
             return _this.widgetService.findWidgetsByPageId(_this.pageId).subscribe(function (widgets) {
@@ -1998,9 +2059,46 @@ var WidgetListComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./widget-list.component.html */ "./src/app/components/widget/widget-list/widget-list.component.html"),
             styles: [__webpack_require__(/*! ./widget-list.component.css */ "./src/app/components/widget/widget-list/widget-list.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_widget_service_client__WEBPACK_IMPORTED_MODULE_2__["WidgetService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_widget_service_client__WEBPACK_IMPORTED_MODULE_2__["WidgetService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"], _services_shared_service__WEBPACK_IMPORTED_MODULE_5__["SharedService"]])
     ], WidgetListComponent);
     return WidgetListComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/auth-guard.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/services/auth-guard.service.ts ***!
+  \************************************************/
+/*! exports provided: AuthGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _user_service_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user.service.client */ "./src/app/services/user.service.client.ts");
+
+
+
+
+var AuthGuard = /** @class */ (function () {
+    function AuthGuard(userService, router) {
+        this.userService = userService;
+        this.router = router;
+    }
+    AuthGuard.prototype.canActivate = function () {
+        return this.userService.loggedIn();
+    };
+    AuthGuard = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_user_service_client__WEBPACK_IMPORTED_MODULE_3__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], AuthGuard);
+    return AuthGuard;
 }());
 
 
@@ -2114,7 +2212,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var SharedService = /** @class */ (function () {
     function SharedService() {
-        this.user = '';
     }
     SharedService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
@@ -2139,32 +2236,55 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shared.service */ "./src/app/services/shared.service.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
 
 
 
 
 var UserService = /** @class */ (function () {
-    function UserService(http) {
+    function UserService(http, router, sharedService) {
         this.http = http;
-        this.baseUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].baseUrl;
+        this.router = router;
+        this.sharedService = sharedService;
+        this.baseUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].baseUrl;
+        this.options = { withCredentials: true };
     }
-    UserService.prototype.createUser = function (user) {
-        return this.http.post(this.baseUrl + 'api/user', user);
+    UserService.prototype.login = function (username, password) {
+        var body = {
+            username: username,
+            password: password
+        };
+        return this.http.post(this.baseUrl + 'api/login', body, this.options);
     };
-    UserService.prototype.findUserById = function (userId) {
-        return this.http.get(this.baseUrl + 'api/user/' + userId);
+    UserService.prototype.logout = function () {
+        return this.http.post(this.baseUrl + 'api/logout', '', this.options);
     };
-    UserService.prototype.findUserByUsername = function (username) {
-        var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]();
-        params = params.append('username', username);
-        return this.http.get(this.baseUrl + 'api/user', { params: params });
+    UserService.prototype.loggedIn = function () {
+        var _this = this;
+        return this.http.post(this.baseUrl + 'api/loggedIn', '', this.options)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (user) {
+            if (user !== 0) {
+                _this.sharedService.user = user; // setting user as global variable using shared service
+                return true;
+            }
+            else {
+                _this.router.navigate(['/login']);
+                return false;
+            }
+        }));
     };
-    UserService.prototype.findUserByCredentials = function (username, password) {
-        var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]();
-        params = params.append('username', username);
-        params = params.append('password', password);
-        return this.http.get(this.baseUrl + 'api/user', { params: params });
+    UserService.prototype.register = function (username, password) {
+        var body = {
+            username: username,
+            password: password
+        };
+        return this.http.post(this.baseUrl + 'api/register', body, this.options);
     };
     UserService.prototype.updateUser = function (user, userId) {
         return this.http.put(this.baseUrl + 'api/user/' + userId, user);
@@ -2174,7 +2294,7 @@ var UserService = /** @class */ (function () {
     };
     UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _shared_service__WEBPACK_IMPORTED_MODULE_4__["SharedService"]])
     ], UserService);
     return UserService;
 }());

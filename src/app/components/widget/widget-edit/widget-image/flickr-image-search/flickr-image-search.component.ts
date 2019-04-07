@@ -22,10 +22,11 @@ export class FlickrImageSearchComponent implements OnInit {
   constructor(private flickrService: FlickrService, private widgetService: WidgetService, private router: Router, private activatedRoute: ActivatedRoute, private sharedService: SharedService) { }
 
   ngOnInit() {
+    const user = this.sharedService.user;
     this.activatedRoute.params
       .subscribe(
         (params: any) => {
-          this.userId = params['uid'];
+          this.userId = user._id;
           this.websiteId = params['wid'];
           this.pageId = params['pid'];
           this.widgetId = params['wgid'];

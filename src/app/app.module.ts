@@ -34,6 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {WidgetHtmlComponent} from './components/widget/widget-edit/widget-html/widget-html.component';
 import { WidgetTextComponent } from './components/widget/widget-edit/widget-text/widget-text.component';
 import { QuillEditorModule } from 'ngx-quill-editor';
+import {AuthGuard} from './services/auth-guard.service';
+
 
 @NgModule({
   declarations: [
@@ -67,7 +69,7 @@ import { QuillEditorModule } from 'ngx-quill-editor';
     HttpClientModule,
     QuillEditorModule
   ],
-  providers: [UserService, PageService, WebsiteService, WidgetService, FlickrService, SharedService],
+  providers: [UserService, PageService, WebsiteService, WidgetService, FlickrService, SharedService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

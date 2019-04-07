@@ -3,6 +3,7 @@ import {WebsiteService} from '../../../services/website.service.client';
 import {ActivatedRoute} from '@angular/router';
 import {NgForm} from '@angular/forms';
 import {Website} from '../../../model/website.model.client';
+import {SharedService} from '../../../services/shared.service';
 
 @Component({
   selector: 'app-website-new',
@@ -17,12 +18,13 @@ export class WebsiteNewComponent implements OnInit {
   websites: Website[] = [];
   website: Website;
 
-  constructor(private websiteService: WebsiteService, private activatedRoute: ActivatedRoute) { }
+  constructor(private websiteService: WebsiteService, private activatedRoute: ActivatedRoute, private sharedService: SharedService) { }
 
   ngOnInit() {
+    const user = this.sharedService.user;
     this.activatedRoute.params.subscribe(
       (params: any) => {
-        this.userId = params['uid'];
+        this.userId = user._id;
         return this.websiteService.findWebsitesByUser(this.userId).subscribe((websites: Website[]) => {
           this.websites = websites;
         });

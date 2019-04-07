@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-light">
 
   <form class="form-inline">
-    <a class="navbar-brand float-left" routerLink="/user/{{userId}}/website/{{websiteId}}/page">
+    <a class="navbar-brand float-left" routerLink="/user/website/{{websiteId}}/page">
       <span class="fa fa-chevron-left rotate"></span>
     </a>
     <a class="navbar-text cl-text-bold" [routerLink]="">
@@ -9,7 +9,7 @@
     </a>
   </form>
   <ul class="navbar-nav ml-auto">
-    <a (click)="create()" routerLink="/user/{{userId}}/website/{{websiteId}}/page" class="navbar-brand pull-right">
+    <a (click)="create()" routerLink="/user/website/{{websiteId}}/page" class="navbar-brand pull-right">
       <span class="fa fa-check"></span>
     </a>
   </ul>
@@ -21,6 +21,9 @@
       <label for="page-name"><h5>Name</h5></label>
       <input type="text" class="form-control" id="page-name" name="name" placeholder="Page Name" ngModel required #name="ngModel">
     </div>
+    <span class="alert alert-danger" *ngIf="!name.valid && name.touched">
+          Please enter name!
+        </span>
     <div class="form-group">
       <label for="page-title"><h5>Title</h5></label>
       <input type="text" class="form-control" id="page-title" name="title" placeholder="Page Title" ngModel required #title="ngModel">
@@ -30,7 +33,7 @@
 
 <nav class="navbar fixed-bottom navbar-light bg-light">
   <ul class="navbar-nav ml-auto">
-    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}">
+    <a class="navbar-brand pull-right" routerLink="/profile">
       <span class="fa fa-user"></span>
     </a>
   </ul>

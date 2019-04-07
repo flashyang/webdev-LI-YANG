@@ -1,13 +1,13 @@
 <nav class="navbar navbar-dark cl-blue-navbar">
   <div class="row container-fluid">
     <div class="col-sm-4 d-none d-sm-block">
-      <a class="navbar-brand float-left" routerLink="/user/{{userId}}/website">
+      <a class="navbar-brand float-left" routerLink="/user/website">
         <span class="fa fa-chevron-left rotate"></span>
       </a>
       <a class="navbar-brand" [routerLink]="">
         Websites
       </a>
-      <a routerLink="/user/{{userId}}/website/new" class="navbar-brand pull-right">
+      <a routerLink="/user/website/new" class="navbar-brand pull-right">
         <span class="fa fa-plus"></span>
       </a>
     </div>
@@ -15,7 +15,7 @@
       <a class="navbar-brand " href="#">
         New Websites
       </a>
-      <a class="navbar-brand float-right" routerLink="/user/{{userId}}/website" (click)="create()">
+      <a class="navbar-brand float-right" routerLink="/user/website" (click)="create()">
         <span class="fa fa-check"></span>
       </a>
     </div>
@@ -27,8 +27,8 @@
     <div class="col-sm-4 d-none d-sm-block">
       <ul class="list-group cl-list-group-borderless">
         <li class="list-group-item cl-list-item-borderless"  *ngFor = "let website of websites">
-          <a routerLink="/user/{{userId}}/website/{{website._id}}"><span class="fa fa-cog pull-right"></span></a>
-          <a routerLink="/user/{{userId}}/website/{{website._id}}/page" class="list-name">{{website.name}}</a>
+          <a routerLink="/user/website/{{website._id}}"><span class="fa fa-cog pull-right"></span></a>
+          <a routerLink="/user/website/{{website._id}}/page" class="list-name">{{website.name}}</a>
         </li>
       </ul>
     </div>
@@ -38,6 +38,9 @@
           <label for="website-name"><h5>Name</h5></label>
           <input type="text" id="website-name" name="name" placeholder="Name" class="form-control" ngModel required #name="ngModel">
         </div>
+        <span class="alert alert-danger" *ngIf="!name.valid && name.touched">
+          Please enter name!
+        </span>
         <div class="form-group">
           <label for="website-description"><h5>Description</h5></label>
           <input type="text" id="website-description" name="description" placeholder="Description" class="form-control" ngModel required #description="ngModel">
@@ -49,7 +52,7 @@
 
 <nav class="navbar navbar-dark fixed-bottom cl-blue-navbar">
   <ul class="navbar-nav ml-auto">
-    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}">
+    <a class="navbar-brand pull-right" routerLink="/profile">
       <span class="fa fa-user"></span>
     </a>
   </ul>

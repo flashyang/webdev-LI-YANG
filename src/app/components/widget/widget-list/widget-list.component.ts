@@ -3,6 +3,7 @@ import {WidgetService} from '../../../services/widget.service.client';
 import {ActivatedRoute} from '@angular/router';
 import {DomSanitizer} from '@angular/platform-browser';
 import {Widget} from '../../../model/widget.model.client';
+import {SharedService} from '../../../services/shared.service';
 
 @Component({
   selector: 'app-widget-list',
@@ -16,12 +17,13 @@ export class WidgetListComponent implements OnInit {
   pageId: String;
   widgets: Widget[] = [];
 
-  constructor(private widgetService: WidgetService, private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer) { }
+  constructor(private widgetService: WidgetService, private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer, private sharedService: SharedService) { }
 
   ngOnInit() {
+    const user = this.sharedService.user;
     this.activatedRoute.params.subscribe(
       (params: any) => {
-        this.userId = params['uid'];
+        this.userId = user._id;
         this.websiteId = params['wid'];
         this.pageId = params['pid'];
         return this.widgetService.findWidgetsByPageId(this.pageId).subscribe((widgets: Widget[])  => {

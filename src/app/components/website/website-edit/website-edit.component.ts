@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {NgForm} from '@angular/forms';
 import { Router} from '@angular/router';
 import {Website} from '../../../model/website.model.client';
+import {SharedService} from '../../../services/shared.service';
 
 @Component({
   selector: 'app-website-edit',
@@ -20,12 +21,13 @@ export class WebsiteEditComponent implements OnInit {
   websites: Website[] = [];
 
 
-  constructor(private websiteService: WebsiteService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private websiteService: WebsiteService, private activatedRoute: ActivatedRoute, private router: Router, private sharedService: SharedService) { }
 
   ngOnInit() {
+    const user = this.sharedService.user;
     this.activatedRoute.params.subscribe(
       (params: any) => {
-        this.userId = params['uid'];
+        this.userId = user._id;
         this.website_id = params['wid'];
         return this.websiteService.findWebsitesById(this.userId, this.website_id).subscribe((website: Website) => {
           this.website = website;

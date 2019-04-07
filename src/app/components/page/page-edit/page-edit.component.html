@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-light">
   <form class="form-inline">
-    <a class="navbar-brand" routerLink="/user/{{userId}}/website/{{websiteId}}/page">
+    <a class="navbar-brand" routerLink="/user/website/{{websiteId}}/page">
       <span class="fa fa-chevron-left rotate"></span>
     </a>
     <a class="navbar-text cl-text-bold" [routerLink]="">
@@ -8,7 +8,7 @@
     </a>
   </form>
   <ul class="navbar-nav ml-auto">
-    <a (click)="update()" routerLink="/user/{{userId}}/website/{{websiteId}}/page" class="navbar-brand pull-right">
+    <a (click)="update()" routerLink="/user/website/{{websiteId}}/page" class="navbar-brand pull-right">
       <span class="fa fa-check"></span>
     </a>
   </ul>
@@ -25,13 +25,13 @@
       <input type="text" class="form-control" id="page-title" placeholder="Page Title" name="title" [(ngModel)]="page.title" required>
     </div>
     <a class="btn btn-danger  btn-block"
-       (click)="delete()" routerLink="/user/{{userId}}/website/{{websiteId}}/page">Delete</a>
+       (click)="delete()" routerLink="/user/website/{{websiteId}}/page">Delete</a>
   </form>
 </div>
 
 <nav class="navbar fixed-bottom navbar-light bg-light">
   <ul class="navbar-nav ml-auto">
-    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}">
+    <a class="navbar-brand pull-right" routerLink="/profile">
       <span class="fa fa-user"></span>
     </a>
   </ul>

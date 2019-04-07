@@ -3,6 +3,8 @@ import {UserService} from '../../../services/user.service.client';
 import {ActivatedRoute} from '@angular/router';
 import {NgForm} from '@angular/forms';
 import {User} from '../../../model/user.model.client';
+import {Router} from '@angular/router';
+import {SharedService} from '../../../services/shared.service';
 
 
 @Component({
@@ -14,7 +16,7 @@ export class ProfileComponent implements OnInit {
   user: User;
 
   @ViewChild('inputForm') createForm: NgForm;
-  constructor(private userService: UserService, private route: ActivatedRoute) { }
+  constructor(private userService: UserService, private route: ActivatedRoute, private router: Router, private sharedService: SharedService) { }
 
   updateUser() {
     const newUser = {
@@ -32,11 +34,23 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      return this.userService.findUserById(params['uid']).subscribe((user: User) => {
-        this.user = user;
-      });
+    this.user = this.sharedService.user;
+  }
+
+  deleteUser() {
+    this.userService.deleteUser(this.user._id).subscribe(() => {
+      this.logout();
     });
+  }
+
+  logout() {
+    this.userService.logout()
+      .subscribe(
+        (data: any) => {
+          this.sharedService.user = '';
+          this.router.navigate(['/login']);
+        }
+      );
   }
 
 }

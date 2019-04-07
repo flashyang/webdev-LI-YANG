@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-light">
   <form class="form-inline">
-    <a class="navbar-brand pull-left" routerLink="/user/{{userId}}/website/{{websiteId}}/page">
+    <a class="navbar-brand pull-left" routerLink="/user/website/{{websiteId}}/page">
       <span class="fa fa-chevron-left rotate"></span>
     </a>
     <a class="navbar-text cl-text-bold" [routerLink]="">
@@ -8,7 +8,7 @@
     </a>
   </form>
   <ul class="navbar-nav ml-auto">
-    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/new">
+    <a class="navbar-brand pull-right" routerLink="/user/website/{{websiteId}}/page/{{pageId}}/widget/new">
       <span class="fa fa-plus"></span>
     </a>
   </ul>
@@ -19,7 +19,7 @@
     <div [ngSwitch]="widget.widgetType">
       <div *ngSwitchCase="'HEADING'">
         <div class="pull-right">
-          <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}">
+          <a routerLink="/user/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}">
             <span class="fa fa-cog"></span>
           </a>
         </div>
@@ -35,7 +35,7 @@
 
       <div *ngSwitchCase="'IMAGE'">
         <div>
-          <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}" class="pull-right">
+          <a routerLink="/user/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}" class="pull-right">
             <span class="fa fa-cog"></span>
           </a>
           <img class="img-responsive img-rounded cl-widget-images"
@@ -45,7 +45,7 @@
 
       <div *ngSwitchCase="'YOUTUBE'" class="youtube-widget">
         <div class="embed-responsive embed-responsive-16by9">
-          <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}" class="pull-right sticky-top">
+          <a routerLink="/user/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}" class="pull-right sticky-top">
             <span class="fa fa-cog youtube" ></span>
           </a>
           <h1>{{widget.url}}</h1>
@@ -55,7 +55,7 @@
 
       <div *ngSwitchCase="'HTML'" [innerHTML]="widget.text">
         <div class="pull-right">
-          <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}">
+          <a routerLink="/user/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}">
             <span class="fa fa-cog"></span>
           </a>
         </div>
@@ -63,7 +63,7 @@
 
       <div *ngSwitchCase="'TEXT'">
         <div class="pull-right">
-          <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}">
+          <a routerLink="/user/website/{{websiteId}}/page/{{pageId}}/widget/{{widget._id}}">
             <span class="fa fa-cog"></span>
           </a>
         </div>
@@ -94,7 +94,7 @@
     </a>
   </form>
   <ul class="navbar-nav ml-auto">
-    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}">
+    <a class="navbar-brand pull-right" routerLink="/profile">
       <span class="fa fa-user"></span>
     </a>
   </ul>

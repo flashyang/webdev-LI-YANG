@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark cl-blue-navbar">
   <form class="form-inline">
-    <a class="navbar-brand pull-left" routerLink="/user/{{userId}}">
+    <a class="navbar-brand pull-left" routerLink="/profile">
       <span class="fa fa-chevron-left rotate"></span>
     </a>
     <a class="navbar-brand" [routerLink]="">
@@ -17,15 +17,15 @@
 <div class="container-fluid">
   <ul class="list-group cl-list-group-borderless">
     <li class="list-group-item cl-list-item-borderless"  *ngFor = "let website of websites">
-      <a routerLink="{{website._id}}"><span class="fa fa-cog pull-right"></span></a>
-      <a routerLink="{{website._id}}/page" class="list-name">{{website.name}}</a>
+      <a routerLink="/user/website/{{website._id}}"><span class="fa fa-cog pull-right"></span></a>
+      <a routerLink="/user/website/{{website._id}}/page" class="list-name">{{website.name}}</a>
     </li>
   </ul>
 </div>
 
 <nav class="navbar navbar-dark fixed-bottom cl-blue-navbar">
   <ul class="navbar-nav ml-auto">
-    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}">
+    <a class="navbar-brand pull-right" routerLink="/profile">
       <span class="fa fa-user"></span>
     </a>
   </ul>

@@ -5,9 +5,18 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 const app = express();
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const passport = require('passport');
+
+app.use(cookieParser());
+app.use(session({ secret: 'process.env.SESSION_SECRET '}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
 
 // Point static path to dist -- For building -- REMOVE
 app.use(express.static(path.join(__dirname, 'dist/webdev')));

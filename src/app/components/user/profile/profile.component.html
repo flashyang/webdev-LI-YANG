@@ -2,7 +2,7 @@
   <a class="navbar-brand" [routerLink]="">
     Profile
   </a>
-  <a class="navbar-brand pull-right" (click)="updateUser()" routerLink="/user/{{user._id}}">
+  <a class="navbar-brand pull-right" (click)="updateUser()" routerLink="/profile">
     <span class="fa fa-check"></span>
   </a>
 </nav>
@@ -35,13 +35,17 @@
 
     <div class="form-group">
       <a class="btn btn-block btn-primary"
-         routerLink="/user/{{user._id}}/website">
+         routerLink="/user/website">
         Websites
       </a>
     </div>
 
     <div class="form-group">
-      <button class="btn btn-danger btn-block" routerLink="/login">Logout</button>
+      <button routerLink="/login" (click)="deleteUser()" class="btn btn-danger btn-block">Delete User</button>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-danger btn-block" (click)="logout()">Logout</button>
     </div>
 
   </form>

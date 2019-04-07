@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-light">
   <form class="form-inline">
-    <a class="navbar-brand pull-left" routerLink="/user/{{userId}}/website">
+    <a class="navbar-brand pull-left" routerLink="/user/website">
       <span class="fa fa-chevron-left rotate"></span>
     </a>
     <a class="navbar-text cl-text-bold" [routerLink]="">
@@ -8,7 +8,7 @@
     </a>
   </form>
   <ul class="navbar-nav ml-auto">
-    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}/website/{{websiteId}}/page/new">
+    <a class="navbar-brand pull-right" routerLink="/user/website/{{websiteId}}/page/new">
       <span class="fa fa-plus"></span>
     </a>
   </ul>
@@ -17,15 +17,15 @@
 <div class="container-fluid">
   <ul class="list-group cl-list-group-borderless">
     <li class="list-group-item cl-list-item-borderless" *ngFor = "let page of pages">
-      <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{page._id}}"><span class="fa fa-cog pull-right"></span></a>
-      <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{page._id}}/widget" class="list-name">{{page.name}}</a>
+      <a routerLink="/user/website/{{websiteId}}/page/{{page._id}}"><span class="fa fa-cog pull-right"></span></a>
+      <a routerLink="/user/website/{{websiteId}}/page/{{page._id}}/widget" class="list-name">{{page.name}}</a>
     </li>
   </ul>
 </div>
 
 <nav class="navbar fixed-bottom navbar-light bg-light">
   <ul class="navbar-nav ml-auto">
-    <a class="navbar-brand pull-right" routerLink="/user/{{userId}}">
+    <a class="navbar-brand pull-right" routerLink="/profile">
       <span class="fa fa-user"></span>
     </a>
   </ul>
