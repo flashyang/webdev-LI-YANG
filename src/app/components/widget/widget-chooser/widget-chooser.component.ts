@@ -42,7 +42,7 @@ export class WidgetChooserComponent implements OnInit {
       formatted: false
     };
     return this.widgetService.createWidget(newWidget).subscribe((widget: Widget) => {
-      this.router.navigate(['/user/' + this.userId + '/website/' + this.websiteId + '/page/' + this.pageId + '/widget/' + widget._id]);
+      this.router.navigate(['/user/website/' + this.websiteId + '/page/' + this.pageId + '/widget/' + widget._id]);
     });
   }
 

@@ -25,7 +25,7 @@ export class WidgetImageComponent implements OnInit {
 
   update() {
     return this.widgetService.updateWidget(this.widget._id, this.widget).subscribe(data => {
-      this.router.navigate(['/user/' + this.userId + '/website/' + this.websiteId + '/page/' + this.pageId + '/widget']);
+      this.router.navigate(['/user/website/' + this.websiteId + '/page/' + this.pageId + '/widget']);
     });
   }
 

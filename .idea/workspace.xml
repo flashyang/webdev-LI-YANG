@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb453e90-a289-4ae6-b80a-26a88cae6de0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assignment/services/user.service.server.js" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/services/user.service.server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/widget/widget-chooser/widget-chooser.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/widget/widget-chooser/widget-chooser.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-text/widget-text.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-text/widget-text.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,22 +29,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.service.server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.service.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignment/services/user.service.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="96" column="11" selection-start-line="96" selection-start-column="11" selection-end-line="96" selection-end-column="34" />
+            <state relative-caret-position="1440">
+              <caret line="96" column="91" lean-forward="true" selection-start-line="96" selection-start-column="91" selection-end-line="96" selection-end-column="91" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app-routing.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app-routing.module.ts">
+      <file leaf-file-name="widget-chooser.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/components/widget/widget-chooser/widget-chooser.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+            <state relative-caret-position="536">
+              <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widget-text.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-text/widget-text.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
               <folding>
-                <element signature="e#0#55#0" expanded="true" />
+                <element signature="e#0#67#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,7 +114,6 @@
         <option value="$PROJECT_DIR$/assignment/model/widget/widget.model.server.js" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-list/widget-list.component.css" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-html/widget-html.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-text/widget-text.component.ts" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-edit.component.html" />
         <option value="$PROJECT_DIR$/src/app/services/widget.service.client.ts" />
@@ -127,7 +138,6 @@
         <option value="$PROJECT_DIR$/src/app/components/website/website-new/website-new.component.ts" />
         <option value="$PROJECT_DIR$/src/app/components/page/page-new/page-new.component.ts" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-list/widget-list.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/components/widget/widget-chooser/widget-chooser.component.ts" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-edit.component.ts" />
         <option value="$PROJECT_DIR$/src/app/components/website/website-list/website-list.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/page/page-edit/page-edit.component.html" />
@@ -137,7 +147,6 @@
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-youtube/widget-youtube.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-text/widget-text.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component.html" />
-        <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component.ts" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/widget-image.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-html/widget-html.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-header/widget-header.component.html" />
@@ -149,6 +158,9 @@
         <option value="$PROJECT_DIR$/assignment/model/user/user.model.server.js" />
         <option value="$PROJECT_DIR$/src/app/components/user/login/login.component.html" />
         <option value="$PROJECT_DIR$/assignment/services/user.service.server.js" />
+        <option value="$PROJECT_DIR$/src/app/components/widget/widget-chooser/widget-chooser.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-text/widget-text.component.ts" />
       </list>
     </option>
   </component>
@@ -240,6 +252,40 @@
               <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="widget" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="widget" type="462c0819:PsiDirectoryNode" />
+              <item name="widget-edit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="widget" type="462c0819:PsiDirectoryNode" />
+              <item name="widget-edit" type="462c0819:PsiDirectoryNode" />
+              <item name="widget-text" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-LI-YANG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-LI-YANG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -307,19 +353,19 @@
       <workItem from="1549591559552" duration="8210000" />
       <workItem from="1550194697833" duration="6456000" />
       <workItem from="1550203778017" duration="119974000" />
-      <workItem from="1553975551905" duration="24441000" />
+      <workItem from="1553975551905" duration="25107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185931000" />
+    <option name="totallyTimeSpent" value="186597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="7" weight="0.25641027" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17758985" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17758985" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -327,7 +373,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3576923" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3576923" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -415,16 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/user/register/register.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -522,30 +558,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/page/page-new/page-new.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/widget/widget-list/widget-list.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
           <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/widget/widget-chooser/widget-chooser.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
@@ -572,16 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-text/widget-text.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/website/website-list/website-list.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -600,23 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/widget/widget-chooser/widget-chooser.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -697,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/page/page-new/page-new.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/website/website-new/website-new.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-14">
@@ -755,6 +737,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/user/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/services/user.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="96" column="91" lean-forward="true" selection-start-line="96" selection-start-column="91" selection-end-line="96" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/widget/widget-chooser/widget-chooser.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/user/register/register.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/page/page-new/page-new.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/page/page-new/page-new.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -765,17 +798,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/user/login/login.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="26" />
+        <state relative-caret-position="-355">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/services/user.service.server.js">
+    <entry file="file://$PROJECT_DIR$/src/app/components/widget/widget-chooser/widget-chooser.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="96" column="11" selection-start-line="96" selection-start-column="11" selection-end-line="96" selection-end-column="34" />
+        <state relative-caret-position="536">
+          <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/widget/widget-edit/widget-text/widget-text.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

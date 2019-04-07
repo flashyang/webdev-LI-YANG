@@ -59,13 +59,12 @@ export class FlickrImageSearchComponent implements OnInit {
       widgetType: 'IMAGE'
     };
 
-    console.log("start to update");
     this.widgetService.updateWidget(this.widgetId, widget).subscribe((data: any) => {
         console.log("finish update");
         console.log(data);
           const result = data;
           if (result) {
-            this.router.navigate(["/user/" + this.userId + "/website/" + this.websiteId + "/page/" + this.pageId + "/widget/" + this.widgetId]);
+            this.router.navigate(["/user/website/" + this.websiteId + "/page/" + this.pageId + "/widget/" + this.widgetId]);
           } else {
             this.error = 'failed!';
           }
